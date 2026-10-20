@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>偏鄉人生 A 版｜可遊玩版本｜活出理想中的自己</title>
+<style>
+:root{--ink:#242823;--muted:#72776e;--paper:#f4f1e9;--card:#fffdf8;--line:#ded9cd;--green:#435b49;--green2:#dfe7dc;--rust:#a65e43;--gold:#d4b26b;--shadow:0 12px 32px #2b33221a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-serif,"Noto Serif TC","PingFang TC",serif;line-height:1.65}button,select,summary{font:inherit}button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent; -webkit-appearance:none;appearance:none}button,summary,a,input,select{touch-action:manipulation}button{ -webkit-user-select:none;user-select:none}html{-webkit-text-size-adjust:100%;text-size-adjust:100%}.topbar{padding:14px max(20px,calc((100vw - 1080px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif;font-size:13px;color:var(--muted)}.brand{font-weight:800;letter-spacing:.12em;color:var(--green)}main{max-width:1080px;margin:auto;padding:26px 20px 64px}.hero{position:relative;overflow:hidden;min-height:285px;border-radius:20px;background:linear-gradient(90deg,#1f3029e8,#1f3029a1 55%,#1f30292b),linear-gradient(135deg,#71806a,#d2c9a7);color:#fff;padding:38px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 42%,#ffffff12 42.2%,transparent 42.6%),linear-gradient(155deg,transparent 30%,#1c3529a6 30.2%,transparent 66%);pointer-events:none}.hero>*{position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font:700 11px system-ui,sans-serif;color:#e5d9b5}.hero h1{font-size:clamp(34px,5vw,58px);letter-spacing:.08em;line-height:1.2;margin:8px 0}.subtitle{font-size:18px;letter-spacing:.12em;color:#eee5d3}.hero p{max-width:620px;color:#f1f0e9;margin:14px 0 0}.quote{font-size:17px;border-left:3px solid var(--gold);padding:2px 0 2px 16px;margin:24px 0;color:#484d44}.layout{display:grid;grid-template-columns:minmax(230px,.82fr) minmax(360px,1.45fr) minmax(230px,.82fr);gap:16px;margin-top:22px}.maincol{min-width:0}.sideleft,.sideright{display:flex;flex-direction:column;gap:16px}.moneyline{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #eee9df;font-size:13px}.moneyline strong{color:var(--green);font-size:17px}.family-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #eee9df;font-size:13px}.family-row:last-child{border:0}.family-row small{display:block;color:var(--muted)}.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 4px 18px #2b332208}.panel h2{font-size:20px;margin:0 0 12px;letter-spacing:.04em}.muted{color:var(--muted);font-size:13px}.section-label{font:700 11px system-ui,sans-serif;color:var(--rust);letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:13px;color:var(--muted)}select{width:100%;border:1px solid var(--line);background:#fffdf8;border-radius:9px;padding:10px;color:var(--ink)}.btn{border:0;border-radius:10px;padding:12px 16px;background:var(--green);color:#fff;font-weight:700;transition:transform .15s,opacity .15s}.btn:hover{transform:translateY(-1px)}.btn:disabled{opacity:.4;cursor:not-allowed}.btn.secondary{background:var(--green2);color:var(--green)}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.hidden{display:none!important}.stat{margin:13px 0}.stat-head{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}.track{height:7px;background:#e9e5db;border-radius:10px;overflow:hidden}.fill{height:100%;background:var(--green);border-radius:10px;transition:width .3s}.fill.low{background:var(--rust)}.trait-list{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.tag{border-radius:100px;padding:4px 9px;background:#eeeae0;color:#64685f;font:12px system-ui,sans-serif}.tag.warn{background:#f3e1d8;color:#8b4e39}.tag.good{background:#e1e9dd;color:#435b49}.scene{background:#e9e5d8;border-radius:12px;padding:20px;margin:14px 0}.scene p{margin:0 0 10px}.scene p:last-child{margin:0}.choices{display:grid;gap:10px;margin-top:15px}.choice{touch-action:manipulation; -webkit-tap-highlight-color:rgba(67,91,73,.18); width:100%;text-align:left;background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:14px 15px;color:var(--ink);display:block}.choice:hover{border-color:var(--green)}.choice:disabled{opacity:.58;cursor:not-allowed}.choice:focus-visible{outline:3px solid var(--gold);outline-offset:2px}.choice.selected{border:2px solid var(--green);background:#edf1e9;padding:13px 14px}.choice strong{display:block;margin-bottom:4px}.choice small{display:block;color:var(--muted);font-size:13px;line-height:1.55}.impact{font-size:12px;color:var(--green);margin-top:7px}.storylog{display:grid;gap:10px}.logitem{padding:12px 14px;border-left:2px solid var(--gold);background:#faf8f1;border-radius:0 8px 8px 0;font-size:13px}.logitem b{display:block;font-size:12px;color:var(--rust);margin-bottom:3px}.status-row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #eee9df;font-size:13px}.status-row:last-child{border:0}.agebadge{display:inline-block;background:var(--green2);color:var(--green);font:700 12px system-ui,sans-serif;letter-spacing:.08em;padding:5px 9px;border-radius:7px}.ending{padding:22px;border:1px solid var(--line);border-radius:14px;background:#f8f4e9;margin-top:16px}.ending h3{font-size:24px;margin:4px 0 10px}.foot{text-align:center;color:var(--muted);font:12px system-ui,sans-serif;margin-top:32px}.smallnote{font-size:12px;color:var(--muted)}.clockbox{margin:12px 0 16px;padding:13px 14px;background:#f7f4ec;border:1px solid var(--line);border-radius:12px}.clockrow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.clockrow label{font-size:13px;font-weight:700}.speedcontrol{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.speedcontrol input{width:150px;accent-color:var(--green)}.clocktrack{height:6px;background:#e5e0d5;border-radius:20px;overflow:hidden;margin-top:10px}.clockfill{height:100%;width:0;background:var(--green);transition:width .05s linear}.clockstatus{font-size:12px;color:var(--muted);margin-top:6px}@media(max-width:980px){.layout{grid-template-columns:minmax(210px,.8fr) minmax(320px,1.3fr)}.sideright{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}}@media(max-width:760px){button,.choice,summary{min-height:48px}.choice{padding:15px 14px}.layout{grid-template-columns:1fr}.sideright{grid-column:auto;display:flex}.hero{padding:25px;min-height:260px}.field-grid{grid-template-columns:1fr}.topbar{padding:12px 18px}main{padding:18px 14px 45px}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="brand">偏鄉人生 A 版</div><div>人生模擬・持續更新的可遊玩原型</div></div>
+<main>
+<section class="hero"><div class="eyebrow">A LIFE SIMULATION · TAIWAN</div><h1>偏鄉人生</h1><div class="subtitle">活出理想中的自己</div><p>出生不是選擇，人生卻會不斷要求你做選擇。每一條路都有代價，而有些限制，在你學會說話以前就已經存在。</p></section>
+<div class="quote">相同的努力，在不同的起點上，可能需要付出截然不同的代價。</div>
+<section id="setup" class="panel">
+<div class="section-label">Chapter 00 · 開始之前</div><h2>出生</h2><p class="muted">每次開始都會隨機分配出生地、家庭照顧狀態、家庭經濟、出生健康與初始天賦。你無法選擇起點，只能在生活中做出選擇。地區與家庭是虛構案例的遊戲起點，不代表當地每個人的生活。</p>
+<div class="scene"><p><strong>出生時的起點由命運決定</strong></p><p>系統會抽出出生地區、家庭照顧狀態、家庭經濟、出生健康狀況與初始天賦。性別也由系統隨機抽取，玩家無法自行選擇；姓名會依抽中的性別生成，其他出生條件同樣由系統隨機生成。</p></div><div class="scene"><p><strong>性別與姓名皆為隨機</strong></p><p>出生時由系統隨機決定角色性別（男性或女性），並依抽中的性別生成姓名。玩家無法自行指定。</p></div><div class="btnrow"><button class="btn" id="startBtn">出生 →</button></div>
+</section>
+<div id="game" class="hidden">
+<div class="layout">
+<div class="sideleft">
+<section class="panel"><div class="section-label">身分紀錄 · CHARACTER</div><h2 id="characterName">尚未命名的孩子</h2><div class="muted" id="profileLine">台灣偏鄉・0 歲</div><div id="identityDetails"></div><div class="trait-list" id="traits"></div></section>
+<section class="panel"><div class="section-label">狀態 · STATUS</div><h2>目前狀態</h2><div id="stats"></div><div class="moneyline"><span>存款（新臺幣）</span><strong id="savings">NT$ 0</strong></div><div class="smallnote">狀態以 0–100 表示；存款以新臺幣計算。若支出超過存款，該選項將無法選擇。</div></section>
+<section class="panel"><div class="section-label">環境與狀態</div><h2>隱性條件</h2><div id="conditions"></div></section>
+</div>
+<div class="maincol">
+<section class="panel"><div class="section-label">Life chapter</div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h2 id="chapterTitle">0 歲：命運的抽籤</h2><span class="agebadge" id="ageBadge">0 歲</span></div><div class="clockbox"><div class="clockrow"><label for="speedSlider">時間流速</label><div class="speedcontrol"><input id="speedSlider" type="range" min="0.25" max="10" step="0.25" value="1"><strong id="speedValue">1×</strong></div></div><div class="smallnote">基準速度：遊戲 1 年＝現實 12 秒（1×）。倍率可在遊戲中隨時調整；例如 2× 為 6 秒／年，0.5× 為 24 秒／年。</div><div class="clocktrack"><div id="clockFill" class="clockfill"></div></div><div id="clockStatus" class="clockstatus">點選任一選項後，效果立即套用，這一年的時間隨即開始流動。</div></div><div class="scene" id="narrative"></div><div id="eventArea"></div><div class="btnrow"><button id="skipBtn" class="btn ghost">重新開始人生</button></div><p class="smallnote">點選選項一次即可，不需要額外確認。選擇效果立即生效，時間依目前倍率推進 12 秒的基準年（預設 1×）；人生階段事件會在相應年齡觸發；完成高中／高職階段後結算；成年後人生留待 B 版。遊戲不會把努力保證成成功。</p></section>
+<section class="panel" style="margin-top:18px"><div class="section-label">Your life, so far</div><h2>人生紀錄</h2><div id="log" class="storylog"><div class="muted">你的故事將從第一個選擇開始記錄。</div></div></section>
+</div>
+<div class="sideright">
+<section class="panel"><div class="section-label">家人關係 · FAMILY</div><h2>家人與生活</h2><div id="familyDetails"></div><p class="smallnote">家人資訊由出生時的家庭安排生成，玩家無法回頭選擇自己的出身。</p></section>
+<section class="panel"><div class="section-label">Life path</div><h2>人生階段</h2><div id="timeline"></div></section>
+<section class="panel"><div class="section-label">人生摘要</div><h2>目前累積</h2><div id="lifeSummary" class="muted">出生後將顯示你的生活摘要。</div></section>
+</div>
+</div>
+</div>
+<section class="panel" id="riskResearch" style="margin-top:18px"><div class="section-label">Research notes · 風險與資料</div><h2>偏鄉生命歷程：問題資料庫</h2><p class="muted">下列官方數字是特定年度的通報或行政統計，不等於「偏鄉兒童一生的發生率」。遊戲中的年度機率是為了呈現風險如何累積而設計的模擬參數，並非官方統計或個人預測。</p><div class="storylog">
+<div class="logitem"><b>家庭暴力、兒虐、疏忽與家庭失能</b>2024 年全國兒少通報案件共 143,500 件次，其中兒少保護通報 118,497 件次；113 保護專線同年通報兒少保護案件 7,190 件。通報件次不是獨立兒童人數，也不能直接換算成個人機率。遊戲會模擬照顧失衡、家暴目睹／受害、疏忽、照顧者成癮或精神困擾、親職衝突、安置與親屬照顧等情境。<br><a href="https://crc.sfaa.gov.tw/Statistics/Detail/64" target="_blank" rel="noopener">資料：兒少統計專區－兒少通報案件</a> · <a href="https://crc.sfaa.gov.tw/Statistics/Detail/13" target="_blank" rel="noopener">兒少受虐致死統計</a></div>
+<div class="logitem"><b>貧窮、食物與居住不穩</b>2024 年低收入戶兒少 73,827 人、中低收入戶兒少 84,830 人。這是福利身分統計，並未涵蓋所有經濟脆弱家庭。遊戲會納入收入中斷、債務、修繕負擔、營養／餐食不足、衣物設備不足、臨時搬家、家人失業及因費用放棄活動。<br><a href="https://crc.sfaa.gov.tw/Statistics/Detail/171" target="_blank" rel="noopener">資料：低收入戶及中低收入戶兒少統計</a> · <a href="https://crc.sfaa.gov.tw/Statistics/Detail/26" target="_blank" rel="noopener">弱勢兒少扶助概況</a></div>
+<div class="logitem"><b>教育資源落差</b>教育部統計包含偏遠地區國中小學校名錄、學生數、原住民學生比率等；官方偏遠地區學校定義亦涵蓋交通、文化、生活機能、數位環境與社會經濟因素。遊戲會納入代理教師更替、師資不足、課程選擇有限、補習資源稀少、設備與網路不足、升學資訊落差、跨區通學、學習支持不足、霸凌與中輟風險。<br><a href="https://stats.moe.gov.tw/edugissys/default.aspx" target="_blank" rel="noopener">資料：教育部各級學校地理資訊系統</a> · <a href="https://data.gov.tw/dataset/28582" target="_blank" rel="noopener">偏遠地區國中小名錄（政府資料開放平台）</a> · <a href="https://stats.moe.gov.tw/files/ebook/Education_Statistics/115/115edu_EXCEL.htm" target="_blank" rel="noopener">教育統計（含偏遠學校概況、中輟等）</a></div>
+<div class="logitem"><b>醫療、身心健康與心理支持</b>偏遠地區可能面臨就醫距離、交通班次、專科／心理服務可近性與家庭支付能力等障礙；各地差異很大，不能用單一全國比率概括。遊戲會納入延遲就醫、慢性病追蹤中斷、牙科／眼科不足、心理壓力、憂鬱焦慮、成癮、身心障礙支持、長照與緊急送醫等事件。<br><a href="https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=43942&amp;pid=198777" target="_blank" rel="noopener">資料：立法院－偏遠地區醫療資源概況</a> · <a href="https://dep.mohw.gov.tw/domhaoh/cp-4904-8883-107.html" target="_blank" rel="noopener">衛福部心理健康司－自殺死亡及通報統計</a></div>
+<div class="logitem"><b>交通、數位落差與社區服務</b>遊戲會模擬公車班次少、長距離通學、天候／道路中斷、網路不穩、設備共用、服務據點遠、課後活動不足、社區資源仰賴少數工作者，以及自然災害與部落／地方文化資源受限或流失。這些項目應依出生地和具體情境調整，不設定成每個偏鄉都必然發生。</div>
+<div class="logitem"><b>青少年到成人：升學、工作與照顧責任</b>遊戲會納入升學費用、離家求學、住宿與交通支出、職涯資訊不足、低薪／非典型工作、勞動權益受損、返鄉就業選擇有限、早期照顧手足、成為家中經濟支柱、親密關係暴力、非預期懷孕、育兒負擔、照顧年長親人、退休保障不足與老年孤立。這些是情境類別，不代表每項都有可直接套用的偏鄉兒少發生率。</div>
+</div><h3 style="margin-top:20px">遊戲內年度抽樣機率（暫定）</h3><p class="muted">以下是遊戲參數，代表「該年抽中一個相關事件的機率」，不是終生風險；同一事件可能重複發生，也可能整個人生都不發生。機率會隨年齡、家庭條件、地區和既有狀態調整。</p><div class="storylog">
+<div class="logitem"><b>家庭照顧失衡／親職衝突：每年 3%</b> 若家庭支持低、經濟壓力高，機率上調；可能出現照顧者工時過長、爭吵、無人接送或照顧責任落在兒童身上。</div>
+<div class="logitem"><b>家暴、目睹暴力或嚴重疏忽：每年 0.8%</b> 僅作遊戲事件抽樣，不代表真實發生率。事件將以非獵奇方式處理，可能影響安全感、健康與信任；也可能出現求助、通報、社工介入或安全安置。</div>
+<div class="logitem"><b>教育／數位資源阻礙：學齡期每年 12%</b> 例如教師更替、設備不足、網路問題、課後輔導缺乏、選課受限或升學資訊落差；學校和社區支持可降低影響。</div>
+<div class="logitem"><b>交通與服務可近性障礙：每年 10%</b> 例如錯過班車、天候影響、就醫或活動需要額外時間與費用；地區交通條件會影響結果。</div>
+<div class="logitem"><b>家庭經濟衝擊：每年 8%</b> 例如工作減班、作物歉收、設備損壞、突發醫療費或債務壓力；經濟緩衝越低，影響越大。</div>
+<div class="logitem"><b>健康或心理壓力事件：兒少每年 5%，成人每年 4%</b> 可能是健康追蹤中斷、持續壓力、孤立、照顧者耗竭或需要專業協助；不是疾病診斷機率。</div>
+<div class="logitem"><b>霸凌／排擠：6–18 歲每年 5%</b> 可能發生在校園、網路或社區；同儕與可信任成人支持能影響後續。</div>
+<div class="logitem"><b>升學／就業／照顧責任衝突：15–64 歲每年 8%</b> 例如因費用、交通、照顧家人或工作時間而放棄課程、工作機會或個人計畫。</div>
+<div class="logitem"><b>老年照顧／孤立風險：65 歲以上每年 10%</b> 例如服務距離遠、慢性病照顧、收入不足、喪偶或社交連結減少；支持網絡可減輕影響。</div><div class="logitem"><b>原住民族議題與資料使用</b>原住民族不是單一且同質的群體。族語、文化參與、升學與補助資格會依個人、部落、地區、學校及法規條件而異；遊戲不把族群身分直接等同於弱勢或特定數值。參考方向：原住民族委員會統計資料、教育部原住民族教育相關統計與政策公告。正式引用數字前需逐項核對發布年份、適用範圍及原始網址。</div>
+</div><p class="smallnote">機率設計版本：0.1（議題導入用）。這些暫定值未經偏鄉代表性縱貫研究校準，適合測試遊戲節奏，不可用於學術推論或政策估計。後續應依年齡、偏遠分級、家庭條件、族群、性別、障礙與縣市資料分層校準，並避免把相關性誤寫成因果。</p></section>
+<div id="ending" class="hidden"></div>
+<div class="foot">《偏鄉人生》A 版第一輪擴充｜新增 35 項基礎情境＋30 項可選隨機事件｜出生至高中／高職階段結算｜預設 12 秒／年<br>遊戲中的人物、數值與事件為虛構設計；模擬參數不是官方發生率。</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const stages=[
+{age:0,title:'0 歲：出生',years:'出生',narrative:['你出生在{region}。產房的燈熄了一盞，窗外是山。你還不知道距離是什麼，也不知道錢能換來什麼。','你的第一聲哭泣，沒有替你決定未來。但出生的地方、照顧你的人，以及家庭能動用的資源，已經開始影響你能走的路。'],event:'出生時的家庭安排（由系統決定）',choices:[{title:'接受出生時的安排，開始人生',desc:'家庭照顧方式與可用資源已由隨機生成決定，這不是嬰兒能選擇的事。',effects:{},condition:'出生起點已確定',log:'你的出生家庭與最初的照顧安排由命運抽籤決定，並非由你選擇。'}]},
+{age:3,title:'3 歲：最初的照顧',years:'幼兒期',narrative:['你開始會說完整的句子，喜歡追著院子裡的雞跑。附近有幼兒園，但接送需要有人騰出時間。','你不知道別的孩子正在學什麼。你只知道，今天照顧你的人說她很累。'],event:'幼兒教育與照顧安排',choices:[{title:'A｜就讀附近的公立幼兒園',desc:'接觸團體活動與早期學習；接送、交通與家長配合仍是問題。',effects:{knowledge:7,support:-2,economy:-2,security:1},condition:'正式幼教支持',log:'你開始在幼兒園接觸同儕與團體學習，家庭得重新安排接送。'},{title:'B｜留在家中，由祖母或親人照顧',desc:'留在熟悉環境、減少部分支出；照顧者負擔增加，同儕互動機會可能較少。',effects:{support:2,security:3,economy:2,knowledge:-2},condition:'家庭照顧負荷',log:'你留在家中，熟悉的陪伴增加，但照顧者的時間更加緊繃。'},{title:'C｜家人調整工作，送你到資源較多的地區',desc:'選擇可能增加，但通勤、時間與費用會擠壓家庭生活。',effects:{knowledge:8,economy:-6,fatigue:3,security:-1},condition:'跨區接送成本',log:'家人為了增加教育選擇，承擔了額外交通與工作成本。'}]},
+{age:6,title:'6 歲：上學以前',years:'入學準備',narrative:['國小入學快到了。家裡開始找書包、制服與接送方式。學校不是只在地圖上的一個點；它還需要一段每天都走得完的路。','有人替你念故事，也有人得先把明天的工作安排好。你能得到多少準備，取決於大人手上有多少時間。'],event:'入學前的準備',choices:[{title:'A｜家人每天陪你閱讀與練習',desc:'語言與學習習慣可能穩定累積，但照顧者需要挪出時間。',effects:{knowledge:6,support:-1,security:2},condition:'家庭學習陪伴',log:'每天短暫的共讀成為你入學前的練習。'},{title:'B｜依靠幼兒園與學校的銜接資源',desc:'減少家庭自行準備的負擔，但資源與個別支持要看實際供給。',effects:{knowledge:3,economy:1,support:1},condition:'學校銜接支持',log:'你透過學校活動熟悉上學生活，家庭保留了一些時間與支出。'},{title:'C｜大人忙於工作，入學準備只能零碎進行',desc:'家庭先處理眼前生計，學習準備可能不連續。',effects:{economy:2,knowledge:-4,fatigue:1,security:-2},condition:'學習準備時間不足',log:'入學準備在工作與家務的空檔裡進行。'}]},
+{age:7,title:'7 歲：國小第一天',years:'國小',narrative:['教室裡有新課本、陌生同學，以及你還叫不出名字的老師。班級裡每個孩子的起點不同，但鐘聲不會為任何人慢下來。','你開始明白，學習不只需要努力，也需要有人能回答問題、穩定的教學，以及回家後能安心寫作業的地方。'],event:'第一學期的適應',choices:[{title:'A｜放學後留下來參加課後照顧',desc:'作業有人協助完成，回家時間較晚，也可能增加疲勞。',effects:{knowledge:6,fatigue:4,economy:-2,security:1},condition:'課後照顧支持',log:'課後照顧替你提供學習空間，也讓一天變得更長。'},{title:'B｜放學後直接回家幫忙家務',desc:'家人更能分擔日常工作，但可用的作業與閱讀時間減少。',effects:{support:3,economy:1,knowledge:-3,fatigue:2},condition:'家庭責任提早增加',log:'放學後，你先幫家裡做事，再處理剩下的功課。'},{title:'C｜向老師求助，努力補上不懂的地方',desc:'可能得到額外指導，也需要克服開口求助的不安；教師時間有限。',effects:{knowledge:5,security:2,fatigue:1},condition:'主動求助策略',log:'你試著把不懂的地方問出口，得到了一些幫助，但不是每次都能立即解答。'}]},
+{age:12,title:'12 歲：國中分岔路',years:'國中',narrative:['升上國中，課程變多，考試也變得密集。若要到更遠的學校，交通時間會進入每天的生活；若留在附近，選課與課外活動的種類可能不同。','你第一次認真問自己：我想要什麼？但家庭能負擔什麼，也同樣需要被回答。'],event:'升學與通勤的選擇',choices:[{title:'A｜留在附近就學，維持家庭支持',desc:'生活與照顧較穩定，但部分課程或活動選擇可能有限。',effects:{support:4,security:3,economy:2,knowledge:1},condition:'在地支持穩定',log:'你留在熟悉的生活圈，親友支持近在身邊。'},{title:'B｜通勤到選擇較多的學校',desc:'接觸不同課程與同儕，但通勤時間消耗休息與自習時間。',effects:{knowledge:6,fatigue:5,economy:-3,security:-1},condition:'長距離通勤',log:'更多選擇出現在眼前，代價是每天更早出門、更晚回家。'},{title:'C｜優先協助家裡，降低額外課業與活動投入',desc:'家人眼前的壓力稍減，但探索興趣與準備升學的時間可能縮小。',effects:{support:3,economy:3,knowledge:-5,fatigue:3},condition:'家庭照顧重擔',log:'你把時間分給家庭，自己的規劃只能往後挪。'}]},
+{age:15,title:'15 歲：選擇下一站',years:'高中／高職',narrative:['畢業考、志願與交通路線同時擺在桌上。你可能選擇普通高中、技術型高中，或更早進入工作。','志願不只反映興趣，也反映學費、住宿、交通、資訊，以及家人能否承受你離家後的生活。'],event:'升學路線',choices:[{title:'A｜選擇普通高中，保留大學升學路線',desc:'未來選擇可能較廣，但考試壓力與後續升學成本仍在。',effects:{knowledge:6,economy:-3,fatigue:3,security:-1},condition:'升學競爭壓力',log:'你選擇繼續升學，新的機會與新的成本一起到來。'},{title:'B｜選擇技術型高中，培養專業技能',desc:'較早接觸實作與職業方向，但科系、設備與實習機會會影響發展。',effects:{knowledge:4,economy:1,security:2},condition:'技職技能累積',log:'你開始把學習與工作技能連在一起，未來路線逐漸具體。'},{title:'C｜選擇較快能就業的道路，分擔家計',desc:'家庭可能較快獲得收入，但學歷與職涯轉換空間可能受限。',effects:{economy:6,knowledge:-5,fatigue:4,support:2},condition:'提早進入勞動市場',log:'你開始為家庭賺錢，短期收入增加，長期選擇卻更需要規劃。'}]},
+{age:18,title:'18 歲：離開或留下',years:'成年起點',narrative:['同學開始談大學、宿舍、工作與搬家。你也在計算：離開家鄉需要多少錢，留下來又有哪些工作。','家鄉是你熟悉的地方，也可能是你想改變的地方。無論留下或離開，都不等於成功或失敗。'],event:'成年後的第一步',choices:[{title:'A｜就讀一般大學',desc:'可探索學術與多元職涯，但學費、住宿、交通與生活費可能形成長期負擔。',effects:{knowledge:9,economy:-9,fatigue:4,security:-2},condition:'一般大學升學成本',log:'你選擇一般大學。學習機會增加，但家庭與自己的財務壓力也隨之提高。'},{title:'B｜就讀科技大學／技術型專業',desc:'以實務、證照與職涯技能為主，實習品質、科系資源與地理位置仍會影響機會。',effects:{knowledge:7,economy:-6,fatigue:3},condition:'技職專業累積',log:'你選擇科技大學或實務導向的專業訓練，開始累積職能與工作經驗。'},{title:'C｜不繼續升學，直接工作',desc:'較早有收入並可能分擔家計，但未來轉職或回到校園需要額外成本。',effects:{economy:7,knowledge:-4,support:2,fatigue:4},condition:'提早進入職場',log:'你沒有繼續升學，而是先進入職場。收入提早到來，部分學習路徑則需要日後再尋找。'},{title:'D｜先工作，再考慮進修',desc:'先保留收入，也可能透過在職進修改變方向，但時間與體力要同時分配。',effects:{economy:3,knowledge:2,fatigue:6},condition:'工作與進修並行',log:'你先工作，再尋找適合自己的進修方式，生活在收入、學習與休息之間拉扯。'}]},
+{age:25,title:'25 歲：站穩腳步',years:'成年生活',narrative:['租金、交通、工作合約與家人的電話，開始成為生活的固定背景。你發現獨立不是不再需要別人，而是開始計算自己能承擔多少。','如果家中有人生病，或工作突然中斷，原本不寬裕的生活可能迅速失去平衡。'],event:'工作與家庭的拉扯',choices:[{title:'A｜接受外地較穩定的工作',desc:'收入與職涯可能增加，但離家距離與照顧家人的安排更複雜。',effects:{economy:7,knowledge:2,support:-4,fatigue:2},condition:'遠距家庭照顧',log:'工作帶來更穩定的收入，也讓照顧家人需要更多協調。'},{title:'B｜返鄉工作，參與家中事務',desc:'親人需要幫忙時你能在場，但工作選擇與薪資成長可能受限。',effects:{support:6,security:3,economy:-1,fatigue:2},condition:'返鄉照顧責任',log:'你回到家鄉，重新連上親族網絡，也接下部分照顧工作。'},{title:'C｜先建立緊急預備金，暫緩重大承諾',desc:'短期生活較節制，能增加遇到意外時的緩衝，但部分計畫需要延後。',effects:{economy:5,security:2,support:-1},condition:'財務緩衝逐步建立',log:'你先存下一筆應急資金，某些想做的事因此往後延。'}]},
+{age:35,title:'35 歲：責任的重量',years:'中壯年',narrative:['你的生活不再只關於自己。工作、伴侶、孩子或父母的需求，可能在同一週同時出現。','服務距離、照顧者請假與家庭收入，會決定一個看似簡單的安排究竟有多難。'],event:'家庭照顧與工作',choices:[{title:'A｜減少工時，親自承擔更多照顧',desc:'家人能得到更多陪伴，但收入與職涯累積可能受影響。',effects:{support:6,security:3,economy:-5,fatigue:5},condition:'照顧者疲勞風險',log:'你把更多時間留給家人，自己的休息與收入空間縮小。'},{title:'B｜維持工作，尋找社區或正式照顧服務',desc:'收入較穩定，照顧安排更依賴服務可近性、資格與名額。',effects:{economy:3,fatigue:-2,security:2},condition:'正式照顧資源需求',log:'你嘗試把照顧交給更完整的支持系統，但服務能否銜接仍要看條件。'},{title:'C｜由親族輪流協助，大家共同分擔',desc:'能共享責任，但親族各自的工作、健康與距離也會造成摩擦。',effects:{support:4,economy:1,fatigue:1,security:1},condition:'親族照顧協調',log:'家人重新協調照顧班表，分擔稍微平均，但每個人的生活都需要讓步。'}]},
+{age:60,title:'60 歲：進入晚年',years:'晚年',narrative:['時間走到另一個速度。你開始更常注意身體、收入與誰能陪你去看診。年輕時的選擇留下了影響，但並不能解釋人生的全部。','有些人留在家鄉，有些人搬到子女附近，有些人依靠朋友、鄰里或社區服務。晚年不是單一的結局，而是一路累積的資源與關係交會的時刻。'],event:'如何安排晚年生活',choices:[{title:'A｜留在熟悉的家鄉生活',desc:'保有地方連結與生活習慣，但就醫交通和日常服務需要提前規劃。',effects:{support:4,security:3,economy:-1,health:-1},condition:'在地老化與交通需求',log:'你選擇留在熟悉的地方，並開始安排就醫與日常支持。'},{title:'B｜搬到靠近醫療與服務的地區',desc:'服務可能更方便，但搬遷成本、離開熟悉社群的失落也需要面對。',effects:{health:4,economy:-4,support:-2,security:1},condition:'遷居適應',log:'你搬近服務較集中的地方，換來便利，也告別熟悉的生活圈。'},{title:'C｜與家人或社區建立固定照顧安排',desc:'照顧責任更有規劃，但仍需要協調人力、金錢與彼此界線。',effects:{support:5,security:4,economy:-2},condition:'晚年支持網絡',log:'你與身邊的人建立更明確的照顧安排，讓需求不再只靠臨時應對。'}]},
+{age:70,title:'70 歲：生活重新安排',years:'老年生活',narrative:['你已經走過許多不同的生活階段。現在，身體狀態、收入來源、居住環境與身邊能互相照應的人，開始更直接地影響每天的安排。','老年並不代表生活停止。有人繼續工作，有人照顧孫輩，有人參與社區，也有人需要更多支持。你仍可以調整生活，只是可用的時間與體力和從前不同。'],event:'重新安排生活與支持',choices:[{title:'A｜維持熟悉的生活節奏',desc:'保留習慣與地方連結，但需要留意健康變化與服務距離。',effects:{security:3,support:2,health:-1,fatigue:1},condition:'熟悉生活與健康管理',log:'你選擇維持熟悉的日常，同時開始更留意身體與生活支持。'},{title:'B｜主動參與社區或長者活動',desc:'增加社會連結與生活目標，但交通和體力仍可能構成限制。',effects:{support:4,security:3,fatigue:2,economy:-1},condition:'老年社會參與',log:'你重新安排時間參與社區活動，生活多了一些固定的相遇。'},{title:'C｜把資源優先留給健康與照顧需求',desc:'增加應對變化的準備，但部分社交或個人計畫需要縮減。',effects:{health:3,security:2,economy:-2,fatigue:-2},condition:'健康與照顧預備',log:'你把更多心力放在健康和未來照顧安排，其他計畫暫時往後挪。'}]},
+{age:80,title:'80 歲：回憶與仍然能做的事',years:'高齡生活',narrative:['熟悉的人與地方可能已經改變。你記得曾經離開、曾經留下，也記得那些看似微小、後來卻一直留在心裡的選擇。','生活可能需要更多協助，但你仍有偏好、關係、記憶與決定權。如何得到適切的支持，和如何保留自己的生活方式，同樣重要。'],event:'安排日常支持與生活自主',choices:[{title:'A｜接受協助，同時保留自己的決定權',desc:'讓生活更安全，也需要和協助者溝通界線與偏好。',effects:{support:4,security:4,economy:-2},condition:'自主與支持並重',log:'你和身邊的人重新談好協助方式，盡量保留自己決定生活的空間。'},{title:'B｜維持與朋友、鄰里或社區的聯繫',desc:'情感支持可能增加，但需要可行的交通、聯絡或陪伴方式。',effects:{support:4,security:3,fatigue:1},condition:'晚年社會連結',log:'你持續維繫重要關係，讓生活不只剩下健康和照顧安排。'},{title:'C｜把時間留給自己在意的事',desc:'完成小目標或整理回憶帶來意義，但有些事情可能需要別人協助。',effects:{security:4,health:1,support:-1},condition:'晚年個人目標',log:'你把時間留給仍然在意的事，重新定義什麼對自己重要。'}]}
+];
+// A 版範圍：只保留出生至完成高中／高職（18 歲）的階段。
+const firstAdultStageIndex=stages.findIndex(s=>s.age>18);
+if(firstAdultStageIndex>=0) stages.splice(firstAdultStageIndex);
+let state=null,selected=null,yearTimer=null,yearStart=0,yearDuration=1000,yearAdvancing=false;
+const initialStats={knowledge:50,economy:38,health:75,security:60,support:65,fatigue:10};
+const statMeta=[['knowledge','知識／學力','學習機會、教育支持與累積的經驗'],['economy','經濟資源','家庭收入、可用資源與應急能力'],['health','身心健康','身體狀況與可獲得的健康支持'],['security','心理安全感','穩定感、韌性與關係支持'],['support','家庭支持','照顧人力、親族與社區連結'],['fatigue','疲勞程度','越高代表休息與復原空間越少']];
+const allConditions=['醫療可近性不足','代理教師流動危機','家庭照顧重擔','交通時間成本','家庭學習陪伴','社區支持網絡','財務緩衝有限'];
+function rand(arr){return arr[Math.floor(Math.random()*arr.length)]}
+function makeFamily(f){if(f.includes('隔代'))return [{role:'主要照顧者',desc:'祖父母／長輩',age:rand([55,61,67,72])+' 歲'},{role:'父母',desc:'可能因工作或照顧安排而不常在身邊',age:'資訊不一'}];if(f.includes('單親'))return [{role:'主要照顧者',desc:'父親或母親一方',age:rand([29,34,38,43])+' 歲'},{role:'另一位家長',desc:'可能長期在外地工作或較少共同生活',age:'資訊不一'}];if(f.includes('部落'))return [{role:'父母',desc:'親族共同照顧',age:rand([28,33,37,42])+' 歲'},{role:'親族',desc:'祖父母、叔伯或其他親人',age:'共同支持'}];return [{role:'母親',desc:'共同照顧家庭',age:rand([27,32,36,40])+' 歲'},{role:'父親',desc:'共同照顧家庭',age:rand([30,35,40,45])+' 歲'}];}
+function money(n){return 'NT$ '+Math.max(0,Math.round(n)).toLocaleString('zh-TW')}
+function spend(cost){if(!state||state.savings<cost)return false;state.savings-=cost;return true;}
+function clamp(n){return Math.max(0,Math.min(100,n))}
+function randomSetup(){ $('region').selectedIndex=Math.floor(Math.random()*$('region').options.length);$('family').selectedIndex=Math.floor(Math.random()*$('family').options.length);$('economy').selectedIndex=Math.floor(Math.random()*$('economy').options.length);$('health').selectedIndex=Math.floor(Math.random()*$('health').options.length);$('talent').selectedIndex=Math.floor(Math.random()*$('talent').options.length);$('mode').value='random'; }
+function startGame(){let gender=rand(['男性','女性']);const namesByGender={男性:['陳冠宇','林志豪','張家銘','黃柏翰','李承恩','王俊傑','潘宇翔','高子軒','陳柏安','周明哲'],女性:['林雅婷','陳怡君','張詠晴','黃郁雯','李佳穎','王思妤','潘美玲','高以安','陳芷晴','周雨彤']};let name=rand(namesByGender[gender]);let region=rand(['花蓮縣卓溪鄉','臺東縣蘭嶼鄉','南投縣仁愛鄉','屏東縣霧臺鄉','嘉義縣阿里山鄉','臺東縣海端鄉']);let family=rand(['隔代協助照顧','單親／父母一方長期外地工作','雙親共同照顧、收入有限','部落親族共同照顧','家庭照顧資源穩定']);let economy=rand(['清寒，經濟緩衝有限','普通勞動家庭','在地小農／小商戶','收入較穩定的受薪家庭']);let health=rand(['一般健康起點','需要較頻繁追蹤健康','先天體質較弱']);let talent=rand(['均衡發展','語言與好奇心較突出','動作與體育興趣較突出','觀察力與耐心較突出']);
+let stats={...initialStats};if(economy.includes('清寒'))stats.economy=25;else if(economy.includes('小農'))stats.economy=43;else if(economy.includes('穩定'))stats.economy=55;if(family.includes('隔代')){stats.support=60;stats.security=55;}if(family.includes('單親')){stats.economy-=3;stats.support=48;}if(family.includes('部落')){stats.support=75;stats.security=65;}if(family.includes('穩定')){stats.support=72;stats.security=70;}if(health.includes('頻繁'))stats.health=60;if(health.includes('體質較弱'))stats.health=48;if(talent.includes('語言'))stats.knowledge=57;if(talent.includes('體育'))stats.health=80;if(talent.includes('觀察力'))stats.security=63;
+stopYearClock();yearAdvancing=false;state={region,family,economyLabel:economy,healthLabel:health,talent,gender,name,age:0,savings:Math.round((economy.includes('清寒')?12000:economy.includes('穩定')?65000:economy.includes('小農')?28000:20000)),familyMembers:makeFamily(family),stats,conditions:new Set(['醫療可近性待觀察','家庭財務緩衝有限']),log:[],choices:[],ended:false,pendingEvent:null};if(family.includes('部落'))state.conditions.add('親族支持網絡');if(economy.includes('清寒'))state.conditions.add('財務緩衝有限');if(health!=='一般健康起點')state.conditions.add('健康追蹤需求');$('setup').classList.add('hidden');$('game').classList.remove('hidden');$('ending').classList.add('hidden');render();}
+function currentStage(){
+ if(state && state.pendingEvent){const ev=state.pendingEvent;return {age:state.age,title:`${state.age} 歲：${ev.title}`,years:ev.category,narrative:[ev.text],event:ev.title,choices:ev.choices};}
+ const milestone=stages.find(x=>x.age===state.age);
+ if(milestone)return milestone;
+ const a=state.age;
+ let phase=a<3?'幼兒期':a<6?'學齡前':a<12?'國小階段':a<15?'國中階段':a<18?'高中／高職階段':a<25?'青年探索期':a<35?'成年生活':a<60?'中年與家庭':a<70?'退休與晚年':a<80?'老年生活':'高齡生活';
+ const narratives=a<6?['這一年沒有突然改變一切。日常照顧、家人的工作時間，以及住家到服務據點的距離，慢慢構成你的生活。','你還不能決定大人如何安排生活，但身邊可用的時間、資源與陪伴，正影響你的安全感與成長。']:a<18?['新的一年開始了。課業、同儕、家務與交通安排，會在平凡日子裡一點一點累積影響。','不是每年都有戲劇性的轉折；有時候，能否穩定上學、好好休息，已經是重要的事。']:a<60?['日子往前走，工作、收入、關係與照顧責任逐漸交錯。你需要在想做的事和眼前能承擔的事之間安排次序。','這一年不一定有單一的大事件，但小決定會影響你留下多少時間、金錢和體力給自己與家人。']:a<80?['歲月繼續往前。健康、收入、交通和身邊的人，逐漸成為生活安排裡更重要的部分。','熟悉的生活方式可能改變，你仍可以調整日常安排，尋找適合自己的支持。']:['你已走過漫長的人生，身體、記憶、日常支持與重要關係可能持續改變。','即使可做的事情與從前不同，你仍然可以選擇如何安排時間、接受什麼協助，以及把注意力放在哪些人事物上。'];
+ const uneventful = Math.random() < 0.28; return {age:a,title:`${a} 歲：${phase}的一年`,years:phase,narrative:uneventful?['這一年沒有特別被記住的大事。日子照常過去，交通、家務、上學或工作仍然佔據生活。','人生不是每一年都會出現清楚的轉折。有些影響來自日常累積，也有些事並不由你決定。']:narratives,event:uneventful?'平凡的一年（沒有重大事件）':'日常生活與資源安排',choices:[
+ {title:'A｜把時間放在學習與未來準備',desc:'替未來累積能力，但會占用休息、家務或工作的時間。',effects:{knowledge:a<25?3:1,economy:-1,fatigue:2,security:1},condition:'持續學習投入',log:'你把一部分時間留給學習與準備，眼前的時間安排因此更緊。'},
+ {title:'B｜優先照顧家庭與維持日常',desc:'讓家裡眼前的安排較穩定，但自己的計畫可能延後。',effects:{support:2,security:1,economy:1,knowledge:-1,fatigue:2},condition:'家庭責任分配',log:'你優先處理家務與照顧，家庭日常得以維持，但自己的時間變少。'},
+ {title:'C｜留時間休息、交友或參與社區生活',desc:'有助恢復體力與維持關係，但部分工作或學習進度會放慢。',effects:{health:2,security:2,support:1,fatigue:-4,economy:-1},condition:'日常復原與社會連結',log:'你為休息與人際關係保留空間，讓生活不只剩下責任與待辦事項。'}]};
+}
+function render(){if(!state)return;let s=currentStage();selected=null;$('chapterTitle').textContent=s.title;$('ageBadge').textContent=s.age+' 歲';$('profileLine').textContent=state.region+'・'+s.age+' 歲・'+state.gender+'・'+state.family;$('characterName').textContent=state.name;$('identityDetails').innerHTML=[['性別',state.gender],['出生地',state.region],['出身家庭',state.family],['家庭經濟',state.economyLabel],['健康起點',state.healthLabel],['天份',state.talent]].map(([k,v])=>`<div class="status-row"><span>${k}</span><span>${v}</span></div>`).join('');$('familyDetails').innerHTML=state.familyMembers.map(m=>`<div class="family-row"><div>${m.role}<small>${m.desc}</small></div><strong>${m.age}</strong></div>`).join('');$('savings').textContent=money(state.savings);$('lifeSummary').textContent=`目前 ${state.age} 歲，生活在${state.region}。已記錄 ${state.log.length} 件人生事件；家庭起點為「${state.family}」。`;$('narrative').innerHTML=s.narrative.map(p=>'<p>'+p.replaceAll('{region}',state.region)+'</p>').join('');$('eventArea').innerHTML='<div class="section-label">Life event · '+s.event+'</div><h2 style="margin-top:0">你會怎麼選擇？</h2><p class="muted">沒有完美答案。請選擇你願意承擔的代價。點選任一選項後，這一年的時間便會開始流動。</p><div class="choices">'+s.choices.map((c,i)=>`<button class="choice" data-choice="${i}"><strong>${c.title}</strong><small>${c.desc}</small></button>`).join('')+'</div><details class="scene spend-menu" style="margin-top:18px"><summary style="cursor:pointer;font-weight:700;font-size:1.1rem">花錢</summary><p class="muted">選擇要把資源花在哪裡。金額以新臺幣計算；存款不足時無法選擇，花費後會直接扣除存款。</p><div class="choices"><button class="choice" data-invest="healthcheck"><strong>檢查自身健康｜NT$ 1,500</strong><small>提早注意身心狀況。</small></button><button class="choice" data-invest="hobby"><strong>培養興趣愛好｜NT$ 2,000</strong><small>累積生活滿足與人際連結。</small></button><button class="choice" data-invest="domestic"><strong>國內旅遊｜NT$ 8,000</strong><small>增加休息與生活經驗。</small></button><button class="choice" data-invest="overseas"><strong>出國旅遊｜NT$ 35,000</strong><small>拓展視野與經驗，支出較高。</small></button></div></details>';
+$('eventArea').querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>{if(yearAdvancing)return;selected=Number(b.dataset.choice);b.classList.add('selected');confirmChoice();}));$('eventArea').querySelectorAll('[data-invest]').forEach(b=>b.addEventListener('click',()=>{if(yearAdvancing)return;const opts={healthcheck:{title:'花錢：檢查自身健康',cost:1500,effects:{health:6,economy:0,security:2},condition:'主動健康管理',log:'你花費資源檢查自身健康，提早取得一些資訊；後續仍取決於醫療可近性與可負擔程度。'},hobby:{title:'花錢：培養興趣愛好',cost:2000,effects:{security:5,support:2,economy:0,fatigue:-2},condition:'個人興趣與生活滿足',log:'你花費時間與金錢培養興趣，生活多了一個不只為了生存而存在的部分。'},domestic:{title:'花錢：國內旅遊',cost:8000,effects:{security:4,health:2,economy:0,fatigue:-4},condition:'國內旅行經驗',log:'你安排了一趟國內旅行，暫時離開日常；旅費與交通仍是實際限制。'},overseas:{title:'花錢：出國旅遊',cost:35000,effects:{knowledge:4,security:6,economy:0,fatigue:-3},condition:'海外文化經驗',log:'你完成一次出國旅行，接觸不同生活經驗；這筆支出也減少了手上的財務緩衝。'}};const c=opts[b.dataset.invest];if(state.savings<c.cost){$('clockStatus').textContent=`存款不足：需要 ${money(c.cost)}，目前存款 ${money(state.savings)}。`;b.disabled=true;b.title='存款不足，無法選擇此項';return;}spend(c.cost);Object.entries(c.effects).forEach(([k,v])=>state.stats[k]=clamp(state.stats[k]+v));state.conditions.add(c.condition);state.choices.push({age:state.age,choice:c.title});state.log.push({age:state.age,title:c.title,text:c.log});renderStats();renderConditions();renderLog();if($('lifeSummary'))$('lifeSummary').textContent=`目前 ${state.age} 歲，存款 ${money(state.savings)}；已記錄 ${state.log.length} 件人生事件。`;yearAdvancing=true;document.querySelectorAll('#eventArea .choice').forEach(x=>x.disabled=true);yearStart=performance.now();yearDuration=12000/Number($('speedSlider').value);$('clockStatus').textContent='已完成花費並套用效果！這一年的時間開始流動；等待進入下一年即可再次選擇。';$('clockFill').style.width='0%';stopYearClock();yearTimer=setInterval(tickYearClock,40);}));renderStats();renderConditions();renderTimeline();renderLog();}
+function renderStats(){ if($('savings'))$('savings').textContent=money(state.savings);$('stats').innerHTML=statMeta.map(([key,name,desc])=>{let v=state.stats[key],bar=key==='fatigue'?100-v:v;return `<div class="stat"><div class="stat-head"><span>${name}</span><strong>${v}/100</strong></div><div class="track"><div class="fill ${key==='fatigue'?(v>65?'low':''):v<30?'low':''}" style="width:${clamp(bar)}%"></div></div><div class="smallnote">${desc}</div></div>`}).join('');$('traits').innerHTML=`<span class="tag">${state.economyLabel}</span><span class="tag">${state.healthLabel}</span><span class="tag">${state.talent}</span><span class="tag">${state.gender}</span>`;}
+function renderConditions(){let arr=[...state.conditions];if(state.stats.economy<30&&!arr.includes('財務緩衝有限'))arr.push('財務緩衝有限');if(state.stats.health<45&&!arr.includes('健康風險需關注'))arr.push('健康風險需關注');if(state.stats.fatigue>65&&!arr.includes('長期疲勞'))arr.push('長期疲勞');if(state.stats.knowledge<30&&!arr.includes('學習支持需求'))arr.push('學習支持需求');$('conditions').innerHTML=arr.map(c=>`<div class="status-row"><span>${c}</span><span class="tag ${/支持|追蹤|技能|陪伴/.test(c)?'good':'warn'}">${/支持|追蹤|技能|陪伴/.test(c)?'支持':'待應對'}</span></div>`).join('')||'<div class="muted">目前沒有特別標記的狀態。</div>';}
+function renderTimeline(){ $('timeline').innerHTML=stages.map(s=>{let done=state.age>s.age,now=state.age===s.age;return `<div class="status-row" style="opacity:${done||now?1:.48}"><span>${s.title}</span><span>${done?'✓':now?'●':'○'}</span></div>`}).join('')+`<div class="status-row"><span>目前年齡逐年推進</span><span>${state.age} 歲</span></div><div class="smallnote">A 版範圍：出生至完成高中／高職階段；成年後人生留待 B 版。</div>`;}
+function renderLog(){ $('log').innerHTML=state.log.length?state.log.slice().reverse().map(x=>`<div class="logitem"><b>${x.age} 歲 · ${x.title}</b>${x.text}</div>`).join(''):'<div class="muted">你的故事將從第一個選擇開始記錄。</div>';}
+function confirmChoice(){if(selected===null||yearAdvancing)return;let s=currentStage(),c=s.choices[selected];const moneyCost=Math.max(0,-(c.effects.economy||0))*1000;if(state.savings<moneyCost){$('clockStatus').textContent=`存款不足：此選項約需 ${money(moneyCost)}，目前存款 ${money(state.savings)}。`;return;}if(moneyCost)spend(moneyCost);const resolvingRandomEvent=!!state.pendingEvent;if(state.pendingEvent){state.log.push({age:s.age,title:state.pendingEvent.title,text:`【${state.pendingEvent.category}｜隨機事件】${state.pendingEvent.text} 你的選擇：${c.title}。${c.log}`});state.pendingEvent=null;}Object.entries(c.effects).forEach(([k,v])=>state.stats[k]=clamp(state.stats[k]+v));state.conditions.add(c.condition);state.choices.push({age:s.age,choice:c.title});if(!resolvingRandomEvent)state.log.push({age:s.age,title:s.event,text:c.log});if(state.stats.economy<25)state.conditions.add('經濟壓力升高');if(state.stats.fatigue>60)state.conditions.add('長期疲勞');if(state.stats.knowledge<30)state.conditions.add('學習支持需求');if(state.stats.support<30)state.conditions.add('照顧支持不足');renderStats();renderConditions();renderLog();if($('lifeSummary'))$('lifeSummary').textContent=`目前 ${state.age} 歲，存款 ${money(state.savings)}；已記錄 ${state.log.length} 件人生事件。`;yearAdvancing=true;document.querySelectorAll('#eventArea .choice').forEach(b=>b.disabled=true);yearStart=performance.now();yearDuration=12000/Number($('speedSlider').value);$('clockStatus').textContent='已套用你的選擇！這一年正在流逝；可調整時間倍率，等待進入下一年。';$('clockFill').style.width='0%';stopYearClock();yearTimer=setInterval(tickYearClock,40);}
+function stopYearClock(){if(yearTimer!==null){clearInterval(yearTimer);yearTimer=null;}}
+// 第一輪擴充事件資料庫（35項）。情境為教育模擬，不代表個人必然經歷；抽樣參數不是官方發生率。
+const expandedEventBank = [
+{id:'EDU-01',age:[3,6],category:'幼兒教育',title:'幼兒園接送安排',text:'幼兒園有活動，但接送時間與照顧者工時衝突。',effects:{support:1,fatigue:1},condition:'幼教接送需求'},
+{id:'EDU-02',age:[5,7],category:'入學轉銜',title:'入學用品的支出',text:'制服、書包與交通費同時出現，家庭需要重新安排預算。',effects:{economy:-2,security:-1},condition:'入學支出壓力'},
+{id:'EDU-03',age:[6,12],category:'教育資源',title:'課後照顧名額有限',text:'課後照顧名額有限，家人需要協調接送與工作時間。',effects:{fatigue:1,support:-1},condition:'課後照顧需求'},
+{id:'EDU-04',age:[6,12],category:'教育資源',title:'代理教師接任',text:'班級教師更替，需要時間熟悉新的教學方式。',effects:{knowledge:-1,security:-1},condition:'教師更替經驗'},
+{id:'EDU-05',age:[7,12],category:'數位落差',title:'網路訊號不穩',text:'線上教材載入困難，學習時間被設備與連線問題打斷。',effects:{knowledge:-1,fatigue:1},condition:'數位學習阻礙'},
+{id:'EDU-06',age:[7,12],category:'學習支持',title:'社區課輔的機會',text:'社區或志工課輔提供額外練習機會，但時間仍要配合交通。',effects:{knowledge:2,fatigue:1},condition:'社區課輔經驗'},
+{id:'EDU-07',age:[8,12],category:'校園生活',title:'參加校外競賽',text:'參賽需要交通與準備時間，學習機會也可能因此增加。',effects:{knowledge:2,economy:-1},condition:'校外學習經驗'},
+{id:'EDU-08',age:[9,13],category:'同儕關係',title:'小校的同儕互動',text:'同學彼此熟悉，合作很方便，意見不合時也容易持續碰面。',effects:{support:1,security:1},condition:'小校同儕經驗'},
+{id:'EDU-09',age:[10,14],category:'校園安全',title:'遇到排擠時找誰幫忙',text:'同儕互動讓你不舒服。可信任的老師或成人可以協助釐清與處理。',effects:{security:-1,support:1},condition:'校園求助經驗'},
+{id:'EDU-10',age:[11,14],category:'升學資訊',title:'第一次接觸升學資訊',text:'不同學校的課程、交通與費用資訊並不總是容易取得。',effects:{knowledge:1,fatigue:1},condition:'升學資訊需求'},
+{id:'TRN-01',age:[6,18],category:'交通可近性',title:'錯過早班交通車',text:'錯過班車會影響到校時間，家人也需要臨時調整工作安排。',effects:{fatigue:2,economy:-1},condition:'通學交通壓力'},
+{id:'TRN-02',age:[6,18],category:'交通可近性',title:'天候影響道路通行',text:'豪雨或道路狀況影響行程，活動與就學安排需要改變。',effects:{fatigue:1,security:-1},condition:'天候交通影響'},
+{id:'TRN-03',age:[12,18],category:'教育轉銜',title:'住校還是通勤',text:'住校可能減少每日交通時間，但也會改變與家人相處的方式。',effects:{support:-1,knowledge:1},condition:'跨區就學考量'},
+{id:'TRN-04',age:[12,18],category:'生活機能',title:'參加活動需要額外交通費',text:'活動本身不一定收費，前往活動地點的交通仍可能成為門檻。',effects:{economy:-1,security:1},condition:'活動交通成本'},
+{id:'HLT-01',age:[0,18],category:'醫療可近性',title:'例行健康追蹤',text:'健康追蹤需要安排時間、交通與照顧者陪同；可近服務會影響安排。',effects:{health:1,economy:-1},condition:'健康追蹤經驗'},
+{id:'HLT-02',age:[6,18],category:'心理健康',title:'壓力累積的訊號',text:'睡眠、專注或情緒出現變化時，求助與休息都值得被認真看待。',effects:{health:-1,security:-1,fatigue:2},condition:'心理壓力訊號'},
+{id:'HLT-03',age:[10,18],category:'心理健康',title:'尋找可信任的大人',text:'導師、輔導人員、社工或家人可能提供不同形式的支持。',effects:{security:2,support:1},condition:'可信任成人支持'},
+{id:'HLT-04',age:[0,18],category:'醫療可近性',title:'家人需要陪診',text:'陪診可能牽涉請假、交通與其他家庭成員的照顧安排。',effects:{support:1,fatigue:1,economy:-1},condition:'家庭陪診經驗'},
+{id:'ECO-01',age:[0,18],category:'家庭經濟',title:'家庭收入短期減少',text:'工作時數或收入短期減少，家庭必須優先安排必要支出。',effects:{economy:-2,security:-1},condition:'收入波動經驗'},
+{id:'ECO-02',age:[6,18],category:'教育支出',title:'校外活動費用',text:'活動費、交通與餐費可能疊加；學校補助與替代方案值得詢問。',effects:{economy:-1,support:1},condition:'教育費用考量'},
+{id:'ECO-03',age:[12,18],category:'升學支出',title:'升學考試與交通成本',text:'考試、志願探索和到外地參訪都可能產生額外交通費。',effects:{economy:-1,knowledge:1},condition:'升學交通成本'},
+{id:'ECO-04',age:[15,18],category:'職涯探索',title:'職涯參訪機會',text:'參訪能協助理解工作內容，但是否能參加也取決於時間與交通。',effects:{knowledge:2,economy:-1},condition:'職涯探索經驗'},
+{id:'ECO-05',age:[15,18],category:'升學支持',title:'詢問獎助學金資訊',text:'符合資格與否需依當年度公告及個人條件確認，不是所有人都適用同一補助。',effects:{knowledge:1,security:1},condition:'獎助學金資訊探索'},
+{id:'FAM-01',age:[0,12],category:'家庭照顧',title:'照顧者工時延長',text:'照顧者工時延長，接送、晚餐或作業陪伴需要重新安排。',effects:{support:-1,fatigue:1},condition:'照顧時間壓力'},
+{id:'FAM-02',age:[6,18],category:'家庭照顧',title:'協助照顧手足',text:'分擔家務能讓家庭運作，但孩子也需要休息、學習與玩耍時間。',effects:{support:1,fatigue:2,knowledge:-1},condition:'家庭分工經驗'},
+{id:'FAM-03',age:[6,18],category:'家庭支持',title:'親族提供臨時協助',text:'親族或鄰里能提供部分協助，但支持能力會隨工作與生活情況改變。',effects:{support:2,security:1},condition:'親族臨時支持'},
+{id:'FAM-04',age:[10,18],category:'家庭溝通',title:'談談未來想走的路',text:'家庭成員對升學、工作與留鄉可能有不同期待，需要協商與資訊。',effects:{security:1,fatigue:1},condition:'家庭職涯溝通'},
+{id:'COM-01',age:[6,18],category:'社區支持',title:'參與社區活動',text:'社區活動帶來人際連結，也需要配合交通、時間與個人意願。',effects:{support:2,security:1},condition:'社區參與經驗'},
+{id:'COM-02',age:[8,18],category:'地方知識',title:'向長輩學習地方故事',text:'長輩分享地方歷史與生活知識，這些知識也是學習的一部分。',effects:{knowledge:1,support:2},condition:'地方知識學習'},
+{id:'COM-03',age:[12,18],category:'社區資源',title:'知道可以向哪裡求助',text:'學校、社福中心、衛生所或社區組織的服務內容與資格各有不同。',effects:{knowledge:1,security:2},condition:'求助資源識別'},
+{id:'IND-01',age:[6,18],category:'原住民族教育與文化',title:'族語課程與學習選擇',text:'族語學習機會依家庭語言、學校課程、師資與個人意願而不同；不以族語能力決定個人價值。',effects:{knowledge:1,support:1},condition:'族語學習經驗'},
+{id:'IND-02',age:[6,18],category:'原住民族教育與文化',title:'文化活動與課業時間',text:'參與文化活動可能連結家庭與社區，也需要與課業、交通及休息協調。',effects:{support:2,fatigue:1},condition:'文化活動參與'},
+{id:'IND-03',age:[10,18],category:'原住民族教育與文化',title:'學校教材中的族群呈現',text:'你注意到教材如何描述自己的族群。可以提出問題，與老師討論不同觀點及資料來源。',effects:{knowledge:1,security:1},condition:'教材文化觀察'},
+{id:'IND-04',age:[12,18],category:'原住民族升學資訊',title:'確認升學支持的適用資格',text:'部分升學或獎助措施有法定資格與申請條件，應依當年度官方規定確認，不以身分直接推定結果。',effects:{knowledge:2,fatigue:1},condition:'原住民族升學資訊探索'},
+{id:'IND-05',age:[12,18],category:'原住民族教育與文化',title:'在地學習與外地升學的考量',text:'留在熟悉的社群或到外地求學都有不同機會與成本，沒有單一正確選擇。',effects:{security:1,knowledge:1},condition:'跨地域升學思考'}
+];
+
+// A版第二輪事件：多選項隨機情境。出現權重為遊戲設計值，不代表真實發生率。
+const interactiveEventBank = [
+{ id:'RND-01',age:[3,6],category:'家庭照顧',title:'接送時間撞上照顧者的工作',text:'活動結束時間與照顧者下班時間衝突，你需要和大人一起找安全的安排。',choices:[
+{title:'A｜提前和老師協調',desc:'花時間溝通，可能找到穩定接送方式。',effects:{support:2,security:1,fatigue:1},condition:'接送協調經驗',log:'你提前和老師協調接送，花了時間，但多了一個可用的安排。'},
+{title:'B｜請可信任親友協助',desc:'增加支持，但需要配合對方時間。',effects:{support:2,fatigue:-1},condition:'親友接送支持',log:'親友願意協助接送，讓照顧安排多了一些彈性。'},
+{title:'C｜照顧者臨時調整工作',desc:'眼前問題解決，但家庭時間壓力增加。',effects:{security:1,fatigue:2},condition:'家庭工時協調',log:'照顧者臨時調整工作處理接送，當天安全到家，但家庭安排更緊。'}]},
+{ id:'RND-02',age:[5,12],category:'教育資源',title:'學用品突然壞掉',text:'上課需要的用品在重要作業前壞掉了，家裡得重新安排資源。',choices:[
+{title:'A｜詢問學校是否有借用資源',desc:'花時間詢問，可能暫時解決問題。',effects:{knowledge:1,support:1},condition:'學用品支援資訊',log:'你詢問學校可用的借用資源，學會了遇到困難時可以先問清楚。'},
+{title:'B｜先用手邊材料替代',desc:'保留金錢，但需要額外時間。',effects:{knowledge:1,fatigue:1},condition:'替代方案經驗',log:'你用現有材料完成作業，花了更多時間，但沒有增加支出。'},
+{title:'C｜和家人討論必要支出',desc:'需要家庭溝通，可能調整其他開銷。',effects:{support:1,security:1},condition:'家庭支出協商',log:'你和家人討論哪些用品最急需，家庭一起做了取捨。'}]},
+{ id:'RND-03',age:[6,18],category:'數位落差',title:'線上作業一直連不上',text:'線上作業期限快到了，網路或設備卻不穩定。',choices:[
+{title:'A｜向老師說明並詢問替代繳交方式',desc:'花時間溝通，可能爭取合理處理。',effects:{support:1,security:1},condition:'數位作業替代方案',log:'你向老師說明設備問題，並詢問可行的替代方式。'},
+{title:'B｜尋找可用的公共或校內設備',desc:'消耗交通與時間，可能完成作業。',effects:{knowledge:1,fatigue:2},condition:'公共設備使用經驗',log:'你花時間找到可用設備，完成作業但也更疲累。'},
+{title:'C｜先完成能做的部分',desc:'降低眼前壓力，部分作業可能延後。',effects:{security:1,fatigue:-1},condition:'分段完成作業',log:'你先完成能做的部分，避免把所有壓力集中在一刻。'}]},
+{ id:'RND-04',age:[6,18],category:'同儕支持',title:'同學邀你加入讀書小組',text:'幾位同學邀你一起準備課業，但你也需要安排休息與家務。',choices:[
+{title:'A｜加入小組並訂下時間界線',desc:'可能提升學習與支持，但要安排時間。',effects:{knowledge:2,support:1,fatigue:1},condition:'讀書小組經驗',log:'你加入讀書小組，也和大家協調可負擔的時間。'},
+{title:'B｜偶爾參加，不固定出席',desc:'保留彈性，進步較慢但負擔較小。',effects:{knowledge:1,support:1},condition:'彈性同儕學習',log:'你選擇彈性參與，保留自己的安排，也維持同儕連結。'},
+{title:'C｜婉拒並安排自己的讀書方式',desc:'保留自主時間，不會因此受懲罰。',effects:{security:1,fatigue:-1},condition:'自主學習安排',log:'你婉拒讀書小組，依自己的步調安排學習與休息。'}]},
+{ id:'RND-05',age:[6,18],category:'校園關係',title:'同學拿你的口音開玩笑',text:'同學模仿你的說話方式逗笑旁人，並說自己沒有惡意。',choices:[
+{title:'A｜清楚說明這讓你不舒服',desc:'可能有短期尷尬，也可能促使對方反思。',effects:{security:1,fatigue:1},condition:'表達人際界線',log:'你說明這種玩笑讓你不舒服，表達界線需要勇氣，也不保證對方立即理解。'},
+{title:'B｜找可信任的老師或朋友陪同處理',desc:'花時間求助，可能獲得支持。',effects:{support:2,security:1},condition:'偏見事件求助',log:'你找可信任的人陪同處理，避免獨自承擔整件事。'},
+{title:'C｜先離開現場，之後再決定',desc:'降低當下衝突，不必立即回應。',effects:{fatigue:-1,security:0},condition:'暫離衝突現場',log:'你先離開現場，保留之後再決定如何處理的空間。'}]},
+{ id:'RND-06',age:[8,18],category:'同儕關係',title:'分組時有人不想和你同組',text:'分組過程中，有同學拒絕合作，理由並不清楚。',choices:[
+{title:'A｜詢問具體的分工理由',desc:'可能釐清誤會，也可能出現不舒服的對話。',effects:{knowledge:1,security:1},condition:'分組協商經驗',log:'你詢問具體理由，希望把問題拉回合作與分工。'},
+{title:'B｜請老師協助公平分組',desc:'需要溝通時間，可能改善規則。',effects:{support:2,fatigue:1},condition:'公平分組求助',log:'你請老師協助分組，將問題交由負責的成人處理。'},
+{title:'C｜另找願意合作的同學',desc:'避開持續衝突，但需要重新安排。',effects:{support:1,security:1},condition:'替代合作關係',log:'你尋找願意合作的同學，重新建立完成任務的方式。'}]},
+{ id:'RND-07',age:[8,18],category:'校園活動',title:'免費營隊名額有限',text:'你得知有一個免費學習營隊，但交通與報名時間仍需要安排。',choices:[
+{title:'A｜先確認交通與支援',desc:'花時間詢問，降低臨時支出的風險。',effects:{knowledge:1,support:1},condition:'營隊資源查詢',log:'你先確認交通與相關支援，再決定是否參加。'},
+{title:'B｜報名並安排同行者',desc:'增加學習機會，也需要額外準備。',effects:{knowledge:2,fatigue:1},condition:'營隊參與經驗',log:'你報名營隊並安排交通，獲得新的學習機會，也花了額外精力。'},
+{title:'C｜這次先不參加',desc:'保留時間與體力，未來仍可尋找其他機會。',effects:{health:1,fatigue:-1},condition:'自主選擇活動',log:'你衡量當下的時間與體力，決定不參加這次活動。'}]},
+{ id:'RND-08',age:[10,18],category:'升學資訊',title:'同學提到你沒聽過的升學管道',text:'你發現自己掌握的升學資訊可能不完整。',choices:[
+{title:'A｜查閱官方招生資訊',desc:'花時間查證，知識增加。',effects:{knowledge:2,fatigue:1},condition:'官方升學資訊查證',log:'你查閱官方招生資料，將聽說的資訊與正式規定分開。'},
+{title:'B｜找老師或輔導人員討論',desc:'需要安排時間，可能得到個別建議。',effects:{knowledge:1,support:2},condition:'升學諮詢經驗',log:'你找老師討論不同管道，獲得更具體的查詢方向。'},
+{title:'C｜先記下來，稍後再研究',desc:'保留當下精力，但要記得追蹤。',effects:{security:1},condition:'升學資訊待查',log:'你先記下這項資訊，等有時間再進一步查證。'}]},
+{ id:'RND-09',age:[10,18],category:'家庭溝通',title:'家人對你的未來有不同期待',text:'家人希望你選擇穩定的道路，而你對未來還有其他想法。',choices:[
+{title:'A｜準備資料後再談',desc:'花時間整理想法，降低只靠情緒爭論的機會。',effects:{knowledge:1,security:1,fatigue:1},condition:'家庭生涯溝通',log:'你整理了自己的理由與資訊，嘗試讓家庭討論更具體。'},
+{title:'B｜先聽家人擔心什麼',desc:'增加理解，但自己的需求可能要晚點再談。',effects:{support:2,security:1},condition:'理解家庭期待',log:'你先聽家人擔心的部分，為下一次討論建立基礎。'},
+{title:'C｜暫緩決定，繼續探索',desc:'保留選擇空間，但需要注意期限。',effects:{knowledge:1,fatigue:-1},condition:'延後生涯決定',log:'你沒有立刻決定，而是保留時間探索不同可能。'}]},
+{ id:'RND-10',age:[12,18],category:'交通可近性',title:'班車延誤，重要活動快開始了',text:'交通延誤打亂了行程，你需要在安全與準時之間重新安排。',choices:[
+{title:'A｜聯絡主辦方說明狀況',desc:'可能錯過部分活動，但安全優先。',effects:{security:1,support:1},condition:'交通延誤溝通',log:'你聯絡主辦方說明交通狀況，沒有為了趕時間冒險。'},
+{title:'B｜確認安全的替代路線',desc:'花時間查詢，可能增加交通成本。',effects:{knowledge:1,fatigue:1},condition:'替代交通規劃',log:'你查詢安全的替代路線，重新安排接下來的行程。'},
+{title:'C｜取消這次活動',desc:'保留安全與精力，但失去一次參與機會。',effects:{health:1,fatigue:-1},condition:'安全優先決策',log:'你決定取消活動，接受錯過機會，也避免不安全的趕路。'}]},
+{ id:'RND-11',age:[0,18],category:'健康照顧',title:'需要安排一次健康追蹤',text:'健康追蹤需要照顧者陪同，也要考慮交通、時間與可負擔性。',choices:[
+{title:'A｜和家人一起安排就診',desc:'需要協調時間，可能及早取得建議。',effects:{health:2,support:1},condition:'健康追蹤安排',log:'家人協助安排健康追蹤，後續仍依專業評估與服務可近性而定。'},
+{title:'B｜先詢問附近可用的服務',desc:'花時間查詢，可能找到較方便的方式。',effects:{knowledge:1,health:1},condition:'在地健康資源查詢',log:'你先查詢附近可用的健康服務，增加了可行選項。'},
+{title:'C｜記下需求，與照顧者討論時間',desc:'先協調家庭安排，避免忽略後續。',effects:{support:1,security:1},condition:'健康安排待協調',log:'你把需求記下來並和照顧者討論，仍需留意後續安排。'}]},
+{ id:'RND-12',age:[6,18],category:'心理支持',title:'最近一直提不起勁',text:'你發現自己持續疲倦或情緒低落，日常生活開始受到影響。',choices:[
+{title:'A｜找可信任的人說說',desc:'需要一點勇氣，可能得到陪伴。',effects:{support:2,security:1},condition:'情緒支持求助',log:'你向可信任的人表達近況，讓自己不必獨自承擔。'},
+{title:'B｜先調整作息並觀察',desc:'嘗試休息與調整安排；若持續不適仍應求助。',effects:{health:1,fatigue:-2},condition:'身心休息調整',log:'你先調整作息與休息；如果不適持續，仍需要考慮專業支持。'},
+{title:'C｜詢問學校輔導或專業服務',desc:'需要安排時間，可能取得更適切的協助。',effects:{support:2,knowledge:1},condition:'專業支持資訊',log:'你詢問可用的輔導或專業服務，了解下一步能怎麼做。'}]},
+{ id:'RND-13',age:[0,18],category:'家庭經濟',title:'家裡這個月收入變少',text:'家庭收入短期下降，需要重新安排必要支出。',choices:[
+{title:'A｜和家人一起整理必要支出',desc:'花時間討論，增加對家庭安排的理解。',effects:{knowledge:1,support:1},condition:'家庭預算討論',log:'家人一起整理必要支出，嘗試讓有限資源先用在重要需求。'},
+{title:'B｜詢問正式社福或教育資源',desc:'需要查詢資格與文件，未必一定符合。',effects:{knowledge:2,fatigue:1},condition:'正式資源查詢',log:'你開始查詢正式資源，是否符合資格仍需依公告和個人條件確認。'},
+{title:'C｜暫時減少非必要消費',desc:'降低支出，但生活選擇可能變少。',effects:{security:-1,economy:1},condition:'短期支出調整',log:'家庭暫時減少非必要支出，財務壓力稍緩但可選擇的活動也變少。'}]},
+{ id:'RND-14',age:[6,18],category:'家庭照顧',title:'放學後需要幫忙照顧手足',text:'家裡臨時需要你幫忙，但你也有作業、休息和自己的安排。',choices:[
+{title:'A｜和家人協商固定照顧時段',desc:'需要溝通，可能讓責任更清楚。',effects:{support:1,security:1},condition:'家庭照顧分工協商',log:'你和家人協商照顧時段，嘗試讓責任分配更清楚。'},
+{title:'B｜先完成急需的照顧，再安排作業',desc:'家庭得到協助，但疲勞可能增加。',effects:{support:1,fatigue:2,knowledge:-1},condition:'照顧與學習取捨',log:'你先處理急需的照顧，再安排作業，當天可用時間變少。'},
+{title:'C｜請其他可信任成人協助',desc:'需要開口求助，可能減輕負擔。',effects:{support:2,fatigue:-1},condition:'家庭照顧外部支持',log:'你向可信任成人詢問協助，照顧責任不再只由你承擔。'}]},
+{ id:'RND-15',age:[6,18],category:'社區支持',title:'社區開設免費課後活動',text:'社區提供課後活動，但時間、交通與個人興趣都需要考量。',choices:[
+{title:'A｜參加並認識新朋友',desc:'可能增加支持與生活經驗。',effects:{support:2,security:1},condition:'社區活動參與',log:'你參加社區活動，認識了新的夥伴。'},
+{title:'B｜先了解活動內容與交通',desc:'花時間詢問，避免安排不合適。',effects:{knowledge:1,security:1},condition:'社區活動資訊查詢',log:'你先了解活動內容與交通，再決定是否參加。'},
+{title:'C｜這次留在家休息',desc:'保留精力，不會因此失去未來機會。',effects:{health:1,fatigue:-2},condition:'自主休息安排',log:'你選擇休息，讓自己有時間恢復。'}]},
+{ id:'RND-16',age:[6,18],category:'地方文化',title:'長輩邀你聽地方故事',text:'家中或社區長輩願意分享地方記憶與生活經驗。',choices:[
+{title:'A｜主動提問並記錄',desc:'增加知識，也需要投入時間。',effects:{knowledge:2,support:1},condition:'地方故事記錄',log:'你記錄長輩分享的地方故事，留下新的知識與連結。'},
+{title:'B｜先聽，不急著記錄',desc:'維持輕鬆交流，也能建立關係。',effects:{support:2,security:1},condition:'世代交流經驗',log:'你先聽長輩分享，透過交流建立連結。'},
+{title:'C｜婉拒這次邀請',desc:'保留個人時間，未來仍可再談。',effects:{fatigue:-1},condition:'個人時間界線',log:'你婉拒這次邀請，保留自己的時間與選擇。'}]},
+{ id:'RND-17',age:[6,18],category:'原住民族文化與語言',title:'你想不想參加族語或文化活動？',text:'學校或社區有族語、文化或地方知識活動。參與意願、語言背景與可用時間因人而異。',choices:[
+{title:'A｜參加並依自己的步調學習',desc:'增加文化或語言經驗，也需要安排時間。',effects:{knowledge:2,support:1,fatigue:1},condition:'族語文化活動參與',log:'你依自己的意願參與活動，學習經驗不被用來衡量個人價值。'},
+{title:'B｜先詢問活動內容與語言程度',desc:'花時間了解，找到合適的參與方式。',effects:{knowledge:1,security:1},condition:'文化活動資訊查詢',log:'你先了解活動內容，選擇適合自己的參與方式。'},
+{title:'C｜這次不參加',desc:'保留個人選擇與休息時間，不受懲罰。',effects:{health:1,fatigue:-1},condition:'自主文化選擇',log:'你決定這次不參加。文化連結不需要用單次活動或語言能力來證明。'}]},
+{ id:'RND-18',age:[8,18],category:'原住民族差別待遇',title:'有人把族群身分當成笑話',text:'同學用族群刻板印象開玩笑，並試圖把你的反應說成「太敏感」。',choices:[
+{title:'A｜表明這不是你能接受的玩笑',desc:'可能有短期摩擦，也能清楚表達界線。',effects:{security:1,fatigue:1},condition:'族群偏見界線表達',log:'你表達這種玩笑不可接受；責任不應由被冒犯的人獨自承擔。'},
+{title:'B｜記錄經過並向可信任成人求助',desc:'花費時間，可能啟動後續處理。',effects:{support:2,knowledge:1},condition:'族群偏見正式求助',log:'你記錄經過並尋求協助，後續結果取決於成人與學校如何處理。'},
+{title:'C｜先離開現場，尋找支持',desc:'避免當下衝突，稍後仍可決定是否處理。',effects:{fatigue:-1,support:1},condition:'族群偏見後續支持',log:'你先離開現場並尋找支持，保留之後處理事件的空間。'}]},
+{ id:'RND-19',age:[10,18],category:'原住民族差別待遇',title:'有人假定你不需要努力就會某項技能',text:'同學或成人把你的能力直接歸因於族群刻板印象，沒有真正了解你的興趣與努力。',choices:[
+{title:'A｜說明自己的實際興趣與經驗',desc:'需要表達自己，可能修正誤解。',effects:{security:1,knowledge:1},condition:'刻板印象回應',log:'你說明自己的興趣與經驗，拒絕被單一印象定義。'},
+{title:'B｜把焦點放回共同任務',desc:'降低爭辯成本，但偏見未必立即消失。',effects:{fatigue:-1,knowledge:1},condition:'回到任務本身',log:'你把焦點放回任務，先完成眼前工作；對方的觀念仍可能需要時間改變。'},
+{title:'C｜與支持你的同學或老師討論',desc:'消耗時間，可能獲得支持。',effects:{support:2,security:1},condition:'刻板印象支持網絡',log:'你與可信任的人討論這次經驗，得到一些支持與不同觀點。'}]},
+{ id:'RND-20',age:[12,18],category:'原住民族升學資訊',title:'你聽說有升學或獎助支持方案',text:'你聽見有人提到特定升學或獎助措施，但資格、期限與文件需要依當年度公告確認。',choices:[
+{title:'A｜查閱主管機關最新公告',desc:'花時間查證，避免只靠傳聞。',effects:{knowledge:2,fatigue:1},condition:'原住民族升學規定查證',log:'你查閱主管機關公告，並確認資格不能只憑身分或傳聞推定。'},
+{title:'B｜請輔導人員協助核對資格',desc:'需要安排時間，可能找到申請方向。',effects:{knowledge:1,support:2},condition:'升學資格諮詢',log:'你請輔導人員協助核對資格，實際結果仍以當年度規定為準。'},
+{title:'C｜先整理文件與問題清單',desc:'提前準備，但仍需確認正式條件。',effects:{knowledge:1,security:1},condition:'升學申請準備',log:'你先整理文件與問題，為後續正式查證做好準備。'}]},
+{ id:'RND-21',age:[10,18],category:'文化呈現',title:'教材只呈現單一族群形象',text:'課堂教材談到原住民族時，只呈現片面的形象，沒有反映不同民族與當代生活的多樣性。',choices:[
+{title:'A｜提出問題並請老師補充資料',desc:'需要勇氣與時間，可能改善課堂討論。',effects:{knowledge:2,security:1},condition:'多元教材討論',log:'你提出問題，希望課堂能使用更完整、可靠且多元的資料。'},
+{title:'B｜與同學一起查找可信資料',desc:'增加學習負擔，也能共同理解。',effects:{knowledge:2,fatigue:1,support:1},condition:'多元文化資料查證',log:'你與同學查找資料，將不同民族與個人經驗區分開來理解。'},
+{title:'C｜不承擔額外教育工作',desc:'保留自己的精力，並非你的責任。',effects:{health:1,fatigue:-1},condition:'文化議題自主界線',log:'你選擇不額外承擔教育他人的工作，仍有權期待教材呈現得更完整。'}]},
+{ id:'RND-22',age:[12,18],category:'跨區就學',title:'外地學校提供參訪機會',text:'參訪能幫助你了解不同課程，但交通、時間與家庭安排都需要考慮。',choices:[
+{title:'A｜查清楚交通與補助後參加',desc:'需要準備，可能拓展選擇。',effects:{knowledge:2,security:1},condition:'跨區學校參訪',log:'你先確認交通與可用資源，再參加參訪。'},
+{title:'B｜和家人或老師討論安排',desc:'花時間協調，可能得到支援。',effects:{support:2,knowledge:1},condition:'跨區參訪協調',log:'你和家人或老師討論安排，讓參訪不只依賴個人承擔。'},
+{title:'C｜這次不參加，先查線上資訊',desc:'保留時間，仍能透過其他方式了解。',effects:{knowledge:1,fatigue:-1},condition:'替代升學探索',log:'你選擇先用線上資料探索學校，之後仍可尋找其他參訪機會。'}]},
+{ id:'RND-23',age:[6,18],category:'社區互助',title:'鄰里臨時需要幫忙',text:'社區有人需要短暫協助，但你也有自己的課業與休息安排。',choices:[
+{title:'A｜在可負擔的範圍內幫忙',desc:'增加連結，但要設定時間界線。',effects:{support:2,fatigue:1},condition:'社區互助經驗',log:'你在可負擔的範圍內幫忙，也留意自己的時間與需要。'},
+{title:'B｜幫忙聯絡更合適的成人',desc:'不必自己承擔所有工作，也能促成協助。',effects:{support:1,knowledge:1},condition:'社區協助轉介',log:'你協助聯絡更合適的成人，讓需要幫助的人找到較適切的支持。'},
+{title:'C｜婉拒並說明自己目前的安排',desc:'保留個人時間，並非不關心社區。',effects:{security:1,fatigue:-1},condition:'社區互助界線',log:'你說明自己目前無法幫忙，保留界線並不代表不在乎他人。'}]},
+{ id:'RND-24',age:[12,18],category:'職涯探索',title:'你對未來工作產生好奇',text:'你發現一種以前沒想過的職業，但還不了解工作內容、訓練與生活條件。',choices:[
+{title:'A｜查詢職業與訓練資訊',desc:'花時間研究，知識增加。',effects:{knowledge:2,fatigue:1},condition:'職涯資料探索',log:'你查詢工作內容與訓練要求，讓想像建立在較具體的資訊上。'},
+{title:'B｜詢問有相關經驗的人',desc:'需要主動聯繫，可能取得實際經驗。',effects:{knowledge:1,support:1},condition:'職涯訪談經驗',log:'你向有相關經驗的人詢問，得到不同於單看職稱的資訊。'},
+{title:'C｜先保留想法，繼續探索其他選項',desc:'不急著定案，保留多種可能。',effects:{security:1,fatigue:-1},condition:'多元職涯探索',log:'你沒有急著決定，保留探索其他方向的空間。'}]},
+{ id:'RND-25',age:[6,18],category:'正向機會',title:'你的作品被看見了',text:'老師、同學或社區成員注意到你完成的一件作品或一項努力。',choices:[
+{title:'A｜接受肯定並繼續練習',desc:'投入時間，可能持續成長。',effects:{knowledge:2,security:1,fatigue:1},condition:'能力被看見',log:'你接受肯定，並決定依自己的興趣繼續練習。'},
+{title:'B｜分享方法，邀請別人一起做',desc:'增加合作，也需要額外精力。',effects:{support:2,knowledge:1,fatigue:1},condition:'技能分享經驗',log:'你分享自己的方法，讓這項能力成為交流的起點。'},
+{title:'C｜低調收下鼓勵，先休息',desc:'保留體力，成長不必靠不斷競賽證明。',effects:{health:1,fatigue:-2,security:1},condition:'成就後休息',log:'你收下鼓勵並先休息，沒有把每次肯定都變成新的壓力。'}]},
+{ id:'RND-26',age:[10,18],category:'同儕衝突',title:'朋友誤會了你的意思',text:'一句話在傳遞過程中變了樣，你和朋友之間出現誤會。',choices:[
+{title:'A｜找時間私下說清楚',desc:'需要溝通，也可能修復關係。',effects:{support:2,security:1},condition:'誤會修復嘗試',log:'你找時間說明自己的意思，也聽對方怎麼理解那句話。'},
+{title:'B｜先冷靜，等情緒平穩再談',desc:'延後處理，降低衝動回應的可能。',effects:{fatigue:-1,security:1},condition:'衝突冷靜處理',log:'你先讓自己冷靜，避免在情緒最強時做出難以挽回的回應。'},
+{title:'C｜請共同信任的人協助溝通',desc:'花時間協調，但可能更容易釐清。',effects:{support:1,knowledge:1},condition:'同儕溝通協助',log:'你請共同信任的人協助釐清，但仍讓當事人保有表達空間。'}]},
+{ id:'RND-27',age:[12,18],category:'交通安全',title:'天候突然變差',text:'雨勢或道路狀況讓原定行程變得不確定，需要優先考慮安全。',choices:[
+{title:'A｜暫停行程並聯絡家人或學校',desc:'可能延誤，但能確認彼此安全。',effects:{security:2,support:1},condition:'惡劣天候安全處置',log:'你暫停行程並聯絡相關人員，將安全放在準時之前。'},
+{title:'B｜依官方與現場安全資訊改道',desc:'需要重新規劃，可能增加時間。',effects:{knowledge:1,fatigue:1},condition:'安全改道經驗',log:'你依安全資訊重新安排路線，沒有冒險通過不安全路段。'},
+{title:'C｜取消活動並改期',desc:'錯過原定活動，但降低風險。',effects:{health:1,fatigue:-1},condition:'天候改期決策',log:'你取消活動並尋找改期方式，接受計畫改變但避免不必要風險。'}]},
+{ id:'RND-28',age:[15,18],category:'升學轉折',title:'考試結果和預期不同',text:'成績與原本預期有落差，你需要判斷接下來怎麼調整，而不是把一次結果當成全部。',choices:[
+{title:'A｜分析錯誤並調整準備方式',desc:'投入時間，可能改善下一次表現。',effects:{knowledge:2,fatigue:2,security:-1},condition:'考試策略調整',log:'你分析考試結果並調整方法，這需要時間，也不保證分數立即上升。'},
+{title:'B｜向老師或同學討論可行選項',desc:'花時間求助，可能看見替代路徑。',effects:{knowledge:1,support:2},condition:'升學選項討論',log:'你和可信任的人討論替代方案，讓決策不只圍繞一次成績。'},
+{title:'C｜先休息，再重新安排目標',desc:'短期不追趕進度，先恢復狀態。',effects:{health:1,fatigue:-2,security:1},condition:'考後恢復與規劃',log:'你先讓自己恢復，再決定下一步，避免在疲憊時做出所有決定。'}]},
+{ id:'RND-29',age:[12,18],category:'家庭與文化連結',title:'你開始思考自己和家鄉的關係',text:'你對未來生活地點、家庭連結、文化與個人目標有了新的疑問。',choices:[
+{title:'A｜和家人或社區長輩談談',desc:'可能增加理解，也可能聽見不同期待。',effects:{support:2,knowledge:1},condition:'家鄉與家庭對話',log:'你和家人或社區長輩談談，聽見不同世代的經驗與期待。'},
+{title:'B｜查詢不同地區的生活與學習條件',desc:'花時間蒐集資訊，增加選擇依據。',effects:{knowledge:2,fatigue:1},condition:'地域生活條件比較',log:'你比較不同地區的教育、交通與生活條件，讓想像更具體。'},
+{title:'C｜暫時不做結論，讓想法慢慢形成',desc:'保留自主空間，不必急著定義自己。',effects:{security:1,fatigue:-1},condition:'地域認同探索',log:'你暫時不做結論，允許自己隨經驗改變想法。'}]},
+{ id:'RND-30',age:[6,18],category:'支持系統',title:'有人主動問你最近還好嗎',text:'在忙碌的一段時間後，有人注意到你的狀態，主動關心你。',choices:[
+{title:'A｜說出自己目前最需要的幫助',desc:'需要信任與表達，可能得到具體支持。',effects:{support:2,security:2},condition:'主動表達支持需求',log:'你說明自己最需要的幫助，讓關心有機會變成具體行動。'},
+{title:'B｜先接受陪伴，不急著解釋',desc:'降低孤單感，不必立刻說清楚所有事。',effects:{support:2,fatigue:-1},condition:'接受陪伴',log:'你先接受陪伴，沒有要求自己立即整理好所有感受。'},
+{title:'C｜婉謝並保留自己的空間',desc:'維持個人界線，之後仍可再求助。',effects:{security:1,fatigue:-1},condition:'支持關係界線',log:'你婉謝這次關心並保留空間，未來仍可以重新尋求支持。'}]}
+];
+
+function annualTransition(){
+  if(state.age>=18){const annualIncome=state.age<25?rand([0,6000,12000,18000]):state.age<60?rand([0,12000,24000,36000]):rand([0,6000,12000]);state.savings=Math.max(0,state.savings+annualIncome);if(annualIncome>0)state.log.push({age:state.age,title:'年度收支',text:`這一年累積可用收入 ${money(annualIncome)}。收入受工作、健康、交通與照顧責任影響，並非固定保障。`});}
+
+  state.age++;
+  // A 版在完成 18 歲的高中／高職階段後結束，不進入成年、老年或死亡模擬。
+  if(state.age>18){
+    state.age=18;
+    state.ended=true;
+    state.log.push({age:18,title:'完成高中／高職階段',text:'A 版人生模擬到此結束。接下來的升學、就業、婚姻、老年與生命終點屬於尚未製作的 B 版範圍。'});
+    showAEnding();
+    return true;
+  }
+  const a=state.age;
+  // 每年先有機會抽中一個可選擇的隨機事件；若抽中，本年度不再疊加自動事件，避免事件過密。
+  const eligibleInteractive=interactiveEventBank.filter(ev=>a>=ev.age[0]&&a<=ev.age[1]&&!state.conditions.has('事件已發生:'+ev.id));
+  if(eligibleInteractive.length && Math.random()<0.38){
+    const ev=rand(eligibleInteractive); state.pendingEvent=ev; state.conditions.add('事件已發生:'+ev.id);
+    return false;
+  }
+  const lowSupport=state.stats.support<40, lowMoney=state.stats.economy<35, regionRemote=/卓溪|蘭嶼|仁愛|霧臺|阿里山|海端/.test(state.region);
+  const riskEvents=[];
+  if(a<=18) riskEvents.push({p:0.03+(lowSupport?0.025:0)+(lowMoney?0.015:0),name:'家庭照顧失衡／親職衝突',text:'照顧者的工時、壓力與可用支持出現衝突。你可能需要自己處理接送、家務或照顧手足；這不是孩子應獨自承擔的責任。',effects:{security:-3,support:-3,fatigue:3},condition:'家庭照顧負荷'});
+  if(a<=18) riskEvents.push({p:0.008+(lowSupport?0.006:0)+(lowMoney?0.004:0),name:'家庭暴力、目睹暴力或嚴重疏忽風險',text:'家中出現讓你感到不安全的衝突、暴力或照顧疏忽。這不是你的錯；可能的後續包括向可信任成人求助、校方／社工介入或安全安置。遊戲不描寫暴力細節。',effects:{security:-8,health:-3,support:-4,fatigue:4},condition:'家庭安全需要關注'});
+  if(a>=3&&a<=22) riskEvents.push({p:0.12+(regionRemote?0.025:0),name:'教育／數位資源阻礙',text:'你遇到師資更替、課後支持不足、設備或網路不穩、升學資訊落差等其中一項阻礙。若有穩定教師、圖書館、社區課輔或設備借用，影響可能降低。',effects:{knowledge:-3,fatigue:2,economy:-1},condition:'教育資源落差'});
+  if(regionRemote) riskEvents.push({p:0.10,name:'交通與服務可近性障礙',text:'班車、道路、天候或服務據點距離，讓就學、就醫或參與活動變得更費時。你需要重新安排時間，也可能增加家庭支出。',effects:{economy:-2,fatigue:3,health:-1},condition:'交通與服務可近性障礙'});
+  riskEvents.push({p:0.08+(lowMoney?0.04:0),name:'家庭經濟衝擊',text:'家庭遇到收入減少、工作中斷、突發修繕或醫療支出。有限的存款讓選擇變少；若有社福、親友或社區支持，衝擊可能被分擔。',effects:{economy:-4,security:-2,fatigue:2},condition:'家庭經濟衝擊'});
+  if(a>=6&&a<=18) riskEvents.push({p:0.05,name:'霸凌、排擠或網路傷害',text:'你在學校、社群或同儕互動中遭遇排擠或傷人的言語。是否有可信任的大人、同儕支持與安全的申訴管道，會影響後續。',effects:{security:-5,support:-1,fatigue:3},condition:'同儕關係壓力'});
+  if(a<=18) riskEvents.push({p:0.05+(state.stats.health<45?0.02:0),name:'健康／心理壓力需要支持',text:'身體不適、長期壓力或情緒低落開始影響日常。交通、費用與服務可近性可能延後求助；及早向可信任成人或專業人員求助能增加支持。',effects:{health:-3,security:-3,fatigue:3},condition:'身心健康需要支持'});
+  if(a>=15&&a<=64) riskEvents.push({p:0.08+(lowMoney?0.025:0),name:'升學、工作與照顧責任衝突',text:'你需要在學費、交通、工作、照顧家人或個人計畫之間取捨。選擇受到資源限制，不代表你缺乏能力或努力。',effects:{economy:-2,knowledge:-1,fatigue:3},condition:'升學就業與照顧衝突'});
+  if(a>=65) riskEvents.push({p:0.10+(lowMoney?0.03:0),name:'老年照顧與社會孤立風險',text:'健康追蹤、交通、收入或社交支持其中一項變得更困難。社區關懷、長照服務、親友連結與可近交通，可能減少孤立與照顧負擔。',effects:{health:-2,security:-2,support:-2,fatigue:2},condition:'老年照顧支持需求'});
+  // 年齡適用的補充事件：每年最多抽中一項，作為情境資料庫；抽樣機率是遊戲設計值。
+  const supplementalPool=expandedEventBank.filter(ev=>a>=ev.age[0]&&a<=ev.age[1]&&!state.conditions.has('事件已發生:'+ev.id));
+  if(supplementalPool.length && Math.random()<0.32){
+    const ev=rand(supplementalPool); state.conditions.add('事件已發生:'+ev.id);
+    Object.entries(ev.effects).forEach(([k,v])=>state.stats[k]=clamp(state.stats[k]+v));
+    state.conditions.add(ev.condition);
+    state.log.push({age:a,title:ev.title,text:`【${ev.category}｜模擬情境】${ev.text} 數值變化屬遊戲設計，非官方發生率。`});
+  }
+  const triggered=riskEvents.find(ev=>Math.random()<Math.min(.35,ev.p));
+  if(triggered){Object.entries(triggered.effects).forEach(([k,v])=>state.stats[k]=clamp(state.stats[k]+v));state.conditions.add(triggered.condition);state.log.push({age:a,title:triggered.name,text:triggered.text+'（遊戲年度抽樣參數，非真實發生率。）'});}
+  // 年度自然變化：健康與恢復能力會隨年齡逐漸改變，但不把年齡直接等同於失能。
+  if(state.age>=50 && state.age<70 && Math.random()<0.35) state.stats.health=clamp(state.stats.health-1);
+  if(state.age>=70 && Math.random()<0.65) state.stats.health=clamp(state.stats.health-1);
+  if(state.age>=60) state.stats.fatigue=clamp(state.stats.fatigue-2);
+  // 遊戲化生命風險：依年齡、健康與疲勞調整，並非真實醫療預測。
+  let risk=state.age<40?0.0005:state.age<60?0.0015:state.age<70?0.004:state.age<80?0.015:state.age<90?0.05:state.age<100?0.12:0.30;
+  if(state.stats.health<30) risk+=0.045; else if(state.stats.health<50) risk+=0.018;
+  if(state.stats.fatigue>80) risk+=0.01;
+  if(state.stats.economy<15) risk+=0.005;
+  if(state.age>=110) risk=Math.max(risk,0.85);
+  if(Math.random()<Math.min(0.98,risk)){
+    state.ended=true;
+    state.deathAge=state.age;
+    state.deathCause=state.stats.health<30?rand(['疾病與健康衰退','健康狀況惡化']):state.age>=85?rand(['自然老化相關原因','疾病與健康衰退','身體機能逐漸衰退']):rand(['突發疾病','意外事件','疾病與健康衰退']);
+    state.log.push({age:state.age,title:'生命終點',text:`你在 ${state.age} 歲離世。遊戲紀錄將這次生命終點記為：${state.deathCause}。這是虛構模擬中的敘事結果，不代表真實個人的壽命預測。`});
+    showEnding(); return true;
+  }
+  return false;
+}
+function tickYearClock(){if(!state||!yearAdvancing)return;yearDuration=12000/Number($('speedSlider').value);const elapsed=performance.now()-yearStart;const progress=Math.min(1,elapsed/yearDuration);$('clockFill').style.width=(progress*100)+'%';$('clockStatus').textContent=`時間流動中：${(Math.max(0,yearDuration-elapsed)/1000).toFixed(2)} 秒後進入下一年`;
+if(progress>=1){stopYearClock();yearAdvancing=false;if(annualTransition())return;render();$('clockFill').style.width='0%';$('clockStatus').textContent='新的一年開始了。選擇一項行動，時間便會繼續流動。';window.scrollTo({top:0,behavior:'smooth'});}}
+
+function showAEnding(){
+  renderStats();renderConditions();renderTimeline();renderLog();
+  $('game').classList.add('hidden');$('ending').classList.remove('hidden');
+  const avg=Math.round((state.stats.knowledge+state.stats.economy+state.stats.health+state.stats.security+state.stats.support+(100-state.stats.fatigue))/6);
+  const headline=avg>=70?'你累積了較多可用資源':avg>=50?'你在限制之間尋找平衡':'你走過一段資源緊縮的成長歷程';
+  const summary=avg>=70?'你的成長過程中累積了一些支持與選擇，但仍有需要付出的成本。':avg>=50?'你在家庭、教育、健康與資源限制之間做出取捨；這段經歷不代表所有偏鄉孩子。':'有限資源讓部分選擇變得更困難。結果不是你不夠努力的證明，而是提醒我們支持系統會影響一個人能承擔的成本。';
+  const lifeLog=state.log.map(x=>`<div class="logitem"><b>${x.age} 歲 · ${x.title}</b>${x.text}</div>`).join('');
+  $('ending').innerHTML=`<section class="panel"><div class="section-label">A Version · Schooling complete</div><h2>學業階段結算</h2><div class="ending"><div class="agebadge">18 歲・完成高中／高職階段</div><h3>${headline}</h3><p>${summary}</p><p>本版本的模擬到高中／高職階段結束，不模擬成年、婚姻、老年或死亡。這是一組虛構條件下的成長歷程，不是對任何偏鄉居民的命運預測。</p><p>你的角色：${state.name}（${state.gender}）；出生地：${state.region}。</p></div><div class="layout"><div class="panel"><h2>最終角色面板</h2><div id="endStats"></div><p>可用存款：${money(state.savings)}</p></div><div class="panel"><h2>成長歷程紀錄</h2><div class="storylog">${lifeLog}</div></div></div><div class="btnrow"><button class="btn" onclick="restart()">重新開始人生</button><button class="btn secondary" onclick="window.print()">列印成長紀錄</button></div></section>`;
+  $('endStats').innerHTML=$('stats').innerHTML;window.scrollTo({top:0,behavior:'smooth'});
+}
+function showEnding(){ renderStats();renderConditions();renderTimeline();renderLog();$('game').classList.add('hidden');$('ending').classList.remove('hidden');let avg=Math.round((state.stats.knowledge+state.stats.economy+state.stats.health+state.stats.security+state.stats.support+(100-state.stats.fatigue))/6);let headline=avg>=70?'你累積了較多可用資源':avg>=50?'你在限制之間尋找平衡':'你走過一段資源緊縮的人生';let text=avg>=70?'你的生命裡有支持、有選擇，也有不得不付出的成本。這不代表每一步都容易，而是你在某些關鍵時刻有足夠資源可以轉身。':avg>=50?'你沒有得到所有想要的東西，也沒有被單一困境定義。家人、制度、機會與自己的決定交織成這段人生。':'許多選擇都發生在資源有限的情況下。結果不是你不夠努力的證明，而是提醒我們：當支持系統不足時，個人需要承擔更高的成本。';let age=state.deathAge??state.age;let cause=state.deathCause??'生命模擬結束';let lifeLog=state.log.map(x=>`<div class="logitem"><b>${x.age} 歲 · ${x.title}</b>${x.text}</div>`).join('');$('ending').innerHTML=`<section class="panel"><div class="section-label">Final chapter · Life review</div><h2>人生結算</h2><div class="ending"><div class="agebadge">${age} 歲・生命終點</div><h3>${headline}</h3><p>${text}</p><p>你在 ${age} 歲離世。生命終點的敘事原因：${cause}。</p><p>你的故事不代表所有偏鄉居民。它呈現的是一組虛構條件如何影響選擇、資源與照顧責任；死亡機率僅為遊戲機制，不是醫療或壽命預測。</p></div><div class="layout"><div class="panel"><h2>最後的角色面板</h2><div id="endStats"></div></div><div class="panel"><h2>這一生的選擇</h2><div class="storylog">${lifeLog}</div></div></div><div class="btnrow"><button class="btn" onclick="restart()">再活一次</button><button class="btn secondary" onclick="window.print()">列印人生紀錄</button></div></section>`;$('endStats').innerHTML=$('stats').innerHTML;window.scrollTo({top:0,behavior:'smooth'});} 
+function restart(){stopYearClock();yearAdvancing=false;state=null;selected=null;$('setup').classList.remove('hidden');$('game').classList.add('hidden');$('ending').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'});}
+// iOS / embedded WebView fallback: handle touch events directly because some previews do not synthesize click reliably.
+let lastTouchHandledAt=0;
+function handleMobileTap(e){
+  const b=e.target && e.target.closest ? e.target.closest('button') : null;
+  if(!b || b.disabled) return;
+  if(e.type==='pointerup' && e.pointerType && e.pointerType!=='touch') return;
+  if(Date.now()-lastTouchHandledAt<500) return;
+  if(e.cancelable) e.preventDefault();
+  lastTouchHandledAt=Date.now();
+  if(b.id==='startBtn'){ startGame(); return; }
+  if(b.id==='skipBtn'){ restart(); return; }
+  if(b.hasAttribute('data-choice')){
+    if(yearAdvancing || selected!==null) return;
+    selected=Number(b.dataset.choice);
+    b.classList.add('selected');
+    confirmChoice();
+    return;
+  }
+}
+document.addEventListener('pointerup',handleMobileTap,{capture:true,passive:false});
+document.addEventListener('click',function(e){
+  if(Date.now()-lastTouchHandledAt<500){
+    const b=e.target && e.target.closest ? e.target.closest('button') : null;
+    if(b){e.preventDefault();e.stopImmediatePropagation();}
+  }
+},{capture:true});
+$('speedSlider').addEventListener('input',()=>{$('speedValue').textContent=Number($('speedSlider').value).toFixed(2).replace(/\.?0+$/,'')+'×';if(yearAdvancing){const now=performance.now(),elapsed=now-yearStart,progress=Math.min(1,elapsed/yearDuration);yearDuration=12000/Number($('speedSlider').value);yearStart=now-progress*yearDuration;}});$('startBtn').addEventListener('click',startGame);$('skipBtn').addEventListener('click',restart);
+// 手機相容性：選項由 render() 綁定原生 click 事件；避免 pointerup 與 click 重複處理，造成觸控事件競態。
+</script>
+</body></html>
